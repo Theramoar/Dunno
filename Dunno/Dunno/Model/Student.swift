@@ -19,3 +19,6 @@ class Student {
         self.studyingTopics = studyingTopics
     }
 }
+
+
+
