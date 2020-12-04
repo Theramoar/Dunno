@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D20E7B3C257ABE4F00EFB685 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E7B3B257ABE4F00EFB685 /* Student.swift */; };
+		D20E7B41257ABF5C00EFB685 /* ChooseMentorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D20E7B40257ABF5C00EFB685 /* ChooseMentorView.xib */; };
+		D20E7B46257AC36C00EFB685 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E7B45257AC36C00EFB685 /* Test.swift */; };
+		D2281026257557C000A909F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2281025257557C000A909F2 /* AppDelegate.swift */; };
+		D2281028257557C000A909F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2281027257557C000A909F2 /* SceneDelegate.swift */; };
+		D228102A257557C000A909F2 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2281029257557C000A909F2 /* ClassViewController.swift */; };
+		D2281030257557C000A909F2 /* Dunno.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D228102E257557C000A909F2 /* Dunno.xcdatamodeld */; };
+		D2281032257557C200A909F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2281031257557C200A909F2 /* Assets.xcassets */; };
+		D2281035257557C200A909F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2281033257557C200A909F2 /* LaunchScreen.storyboard */; };
+		D228103E2575598B00A909F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228103D2575598B00A909F2 /* TabBarController.swift */; };
+		D228104225755B1200A909F2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228104125755B1200A909F2 /* ChatViewController.swift */; };
+		D228104525757CC200A909F2 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228104425757CC200A909F2 /* Subject.swift */; };
+		D228104925757DD500A909F2 /* ClassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D228104825757DD500A909F2 /* ClassView.xib */; };
+		D2629EF025757EDA0063DA6F /* ClassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EEF25757EDA0063DA6F /* ClassViewModel.swift */; };
+		D2629EF4257583E00063DA6F /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EF3257583E00063DA6F /* ClassCell.swift */; };
+		D2629EF7257584160063DA6F /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EF6257584160063DA6F /* UserProfileViewController.swift */; };
+		D2AA5F0A257959B90092F869 /* ChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2AA5F09257959B90092F869 /* ChatView.xib */; };
+		D2AA5F0E25795AA20092F869 /* UserProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2AA5F0D25795AA20092F869 /* UserProfileView.xib */; };
+		D2AA5F15257965BE0092F869 /* SubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2AA5F14257965BE0092F869 /* SubjectCell.xib */; };
+		D2AA5F18257965CD0092F869 /* AddSubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2AA5F17257965CD0092F869 /* AddSubjectCell.xib */; };
+		D2AA5F1B257965DB0092F869 /* AddSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA5F1A257965DB0092F869 /* AddSubjectCell.swift */; };
+		D2AA5F1E257965E70092F869 /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA5F1D257965E70092F869 /* SubjectCell.swift */; };
+		D2AA5F3225796CB30092F869 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2AA5F3125796CB30092F869 /* MessageCell.xib */; };
+		D2AA5F3525796CBA0092F869 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA5F3425796CBA0092F869 /* MessageCell.swift */; };
+		D2AA5F3A257AAC6F0092F869 /* SavedMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA5F38257AAC6F0092F869 /* SavedMessage+CoreDataClass.swift */; };
+		D2AA5F3B257AAC6F0092F869 /* SavedMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA5F39257AAC6F0092F869 /* SavedMessage+CoreDataProperties.swift */; };
+		D2D5DB2C257AAEEB000FEA32 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D5DB2B257AAEEB000FEA32 /* CoreDataManager.swift */; };
+		D2D5DB30257AB6DA000FEA32 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D5DB2F257AB6DA000FEA32 /* SubjectViewController.swift */; };
+		D2D5DB34257AB6E7000FEA32 /* SubjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2D5DB33257AB6E7000FEA32 /* SubjectViewController.xib */; };
+		D2D5DB39257ABB14000FEA32 /* ChooseMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D5DB38257ABB14000FEA32 /* ChooseMentorViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D20E7B3B257ABE4F00EFB685 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		D20E7B40257ABF5C00EFB685 /* ChooseMentorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseMentorView.xib; sourceTree = "<group>"; };
+		D20E7B45257AC36C00EFB685 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		D2281022257557C000A909F2 /* Dunno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dunno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2281025257557C000A909F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2281027257557C000A909F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D2281029257557C000A909F2 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
+		D228102F257557C000A909F2 /* Dunno.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dunno.xcdatamodel; sourceTree = "<group>"; };
+		D2281031257557C200A909F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2281034257557C200A909F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2281036257557C200A909F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D228103D2575598B00A909F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D228104125755B1200A909F2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D228104425757CC200A909F2 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		D228104825757DD500A909F2 /* ClassView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassView.xib; sourceTree = "<group>"; };
+		D2629EEF25757EDA0063DA6F /* ClassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewModel.swift; sourceTree = "<group>"; };
+		D2629EF3257583E00063DA6F /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		D2629EF6257584160063DA6F /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		D2AA5F09257959B90092F869 /* ChatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatView.xib; sourceTree = "<group>"; };
+		D2AA5F0D25795AA20092F869 /* UserProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileView.xib; sourceTree = "<group>"; };
+		D2AA5F14257965BE0092F869 /* SubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCell.xib; sourceTree = "<group>"; };
+		D2AA5F17257965CD0092F869 /* AddSubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSubjectCell.xib; sourceTree = "<group>"; };
+		D2AA5F1A257965DB0092F869 /* AddSubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectCell.swift; sourceTree = "<group>"; };
+		D2AA5F1D257965E70092F869 /* SubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
+		D2AA5F3125796CB30092F869 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		D2AA5F3425796CBA0092F869 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		D2AA5F38257AAC6F0092F869 /* SavedMessage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D2AA5F39257AAC6F0092F869 /* SavedMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D2D5DB2B257AAEEB000FEA32 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D2D5DB2F257AB6DA000FEA32 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		D2D5DB33257AB6E7000FEA32 /* SubjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectViewController.xib; sourceTree = "<group>"; };
+		D2D5DB38257ABB14000FEA32 /* ChooseMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMentorViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D228101F257557C000A909F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D20E7B44257AC35700EFB685 /* ChooseMentorView */ = {
+			isa = PBXGroup;
+			children = (
+				D2D5DB38257ABB14000FEA32 /* ChooseMentorViewController.swift */,
+				D20E7B40257ABF5C00EFB685 /* ChooseMentorView.xib */,
+			);
+			path = ChooseMentorView;
+			sourceTree = "<group>";
+		};
+		D2281019257557C000A909F2 = {
+			isa = PBXGroup;
+			children = (
+				D2281024257557C000A909F2 /* Dunno */,
+				D2281023257557C000A909F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2281023257557C000A909F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2281022257557C000A909F2 /* Dunno.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2281024257557C000A909F2 /* Dunno */ = {
+			isa = PBXGroup;
+			children = (
+				D2281025257557C000A909F2 /* AppDelegate.swift */,
+				D2281027257557C000A909F2 /* SceneDelegate.swift */,
+				D2AA5F38257AAC6F0092F869 /* SavedMessage+CoreDataClass.swift */,
+				D2AA5F39257AAC6F0092F869 /* SavedMessage+CoreDataProperties.swift */,
+				D228104425757CC200A909F2 /* Subject.swift */,
+				D20E7B3B257ABE4F00EFB685 /* Student.swift */,
+				D20E7B45257AC36C00EFB685 /* Test.swift */,
+				D2D5DB2B257AAEEB000FEA32 /* CoreDataManager.swift */,
+				D228103D2575598B00A909F2 /* TabBarController.swift */,
+				D20E7B44257AC35700EFB685 /* ChooseMentorView */,
+				D2D5DB37257ABAC9000FEA32 /* SubjectView */,
+				D2629EF9257586280063DA6F /* Classes */,
+				D2AA5F12257963520092F869 /* User Profile */,
+				D2D5DB2E257AB6B4000FEA32 /* Chat View */,
+				D2281031257557C200A909F2 /* Assets.xcassets */,
+				D2281033257557C200A909F2 /* LaunchScreen.storyboard */,
+				D2281036257557C200A909F2 /* Info.plist */,
+				D228102E257557C000A909F2 /* Dunno.xcdatamodeld */,
+			);
+			path = Dunno;
+			sourceTree = "<group>";
+		};
+		D2629EF9257586280063DA6F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D2281029257557C000A909F2 /* ClassViewController.swift */,
+				D2629EF3257583E00063DA6F /* ClassCell.swift */,
+				D2629EEF25757EDA0063DA6F /* ClassViewModel.swift */,
+				D228104825757DD500A909F2 /* ClassView.xib */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D2AA5F12257963520092F869 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D2629EF6257584160063DA6F /* UserProfileViewController.swift */,
+				D2AA5F17257965CD0092F869 /* AddSubjectCell.xib */,
+				D2AA5F1A257965DB0092F869 /* AddSubjectCell.swift */,
+				D2AA5F14257965BE0092F869 /* SubjectCell.xib */,
+				D2AA5F1D257965E70092F869 /* SubjectCell.swift */,
+				D2AA5F0D25795AA20092F869 /* UserProfileView.xib */,
+			);
+			path = "User Profile";
+			sourceTree = "<group>";
+		};
+		D2D5DB2E257AB6B4000FEA32 /* Chat View */ = {
+			isa = PBXGroup;
+			children = (
+				D228104125755B1200A909F2 /* ChatViewController.swift */,
+				D2AA5F09257959B90092F869 /* ChatView.xib */,
+				D2AA5F3425796CBA0092F869 /* MessageCell.swift */,
+				D2AA5F3125796CB30092F869 /* MessageCell.xib */,
+			);
+			path = "Chat View";
+			sourceTree = "<group>";
+		};
+		D2D5DB37257ABAC9000FEA32 /* SubjectView */ = {
+			isa = PBXGroup;
+			children = (
+				D2D5DB2F257AB6DA000FEA32 /* SubjectViewController.swift */,
+				D2D5DB33257AB6E7000FEA32 /* SubjectViewController.xib */,
+			);
+			path = SubjectView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2281021257557C000A909F2 /* Dunno */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2281039257557C200A909F2 /* Build configuration list for PBXNativeTarget "Dunno" */;
+			buildPhases = (
+				D228101E257557C000A909F2 /* Sources */,
+				D228101F257557C000A909F2 /* Frameworks */,
+				D2281020257557C000A909F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dunno;
+			productName = Dunno;
+			productReference = D2281022257557C000A909F2 /* Dunno.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D228101A257557C000A909F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					D2281021257557C000A909F2 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = D228101D257557C000A909F2 /* Build configuration list for PBXProject "Dunno" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2281019257557C000A909F2;
+			productRefGroup = D2281023257557C000A909F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2281021257557C000A909F2 /* Dunno */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2281020257557C000A909F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20E7B41257ABF5C00EFB685 /* ChooseMentorView.xib in Resources */,
+				D2AA5F0A257959B90092F869 /* ChatView.xib in Resources */,
+				D2AA5F18257965CD0092F869 /* AddSubjectCell.xib in Resources */,
+				D2281035257557C200A909F2 /* LaunchScreen.storyboard in Resources */,
+				D2281032257557C200A909F2 /* Assets.xcassets in Resources */,
+				D228104925757DD500A909F2 /* ClassView.xib in Resources */,
+				D2AA5F3225796CB30092F869 /* MessageCell.xib in Resources */,
+				D2D5DB34257AB6E7000FEA32 /* SubjectViewController.xib in Resources */,
+				D2AA5F15257965BE0092F869 /* SubjectCell.xib in Resources */,
+				D2AA5F0E25795AA20092F869 /* UserProfileView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D228101E257557C000A909F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AA5F1E257965E70092F869 /* SubjectCell.swift in Sources */,
+				D2D5DB30257AB6DA000FEA32 /* SubjectViewController.swift in Sources */,
+				D2629EF4257583E00063DA6F /* ClassCell.swift in Sources */,
+				D2629EF7257584160063DA6F /* UserProfileViewController.swift in Sources */,
+				D2D5DB39257ABB14000FEA32 /* ChooseMentorViewController.swift in Sources */,
+				D2AA5F3B257AAC6F0092F869 /* SavedMessage+CoreDataProperties.swift in Sources */,
+				D228102A257557C000A909F2 /* ClassViewController.swift in Sources */,
+				D2AA5F3525796CBA0092F869 /* MessageCell.swift in Sources */,
+				D2629EF025757EDA0063DA6F /* ClassViewModel.swift in Sources */,
+				D2281026257557C000A909F2 /* AppDelegate.swift in Sources */,
+				D228104525757CC200A909F2 /* Subject.swift in Sources */,
+				D2281030257557C000A909F2 /* Dunno.xcdatamodeld in Sources */,
+				D228103E2575598B00A909F2 /* TabBarController.swift in Sources */,
+				D2AA5F1B257965DB0092F869 /* AddSubjectCell.swift in Sources */,
+				D228104225755B1200A909F2 /* ChatViewController.swift in Sources */,
+				D2AA5F3A257AAC6F0092F869 /* SavedMessage+CoreDataClass.swift in Sources */,
+				D2D5DB2C257AAEEB000FEA32 /* CoreDataManager.swift in Sources */,
+				D20E7B46257AC36C00EFB685 /* Test.swift in Sources */,
+				D20E7B3C257ABE4F00EFB685 /* Student.swift in Sources */,
+				D2281028257557C000A909F2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D2281033257557C200A909F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2281034257557C200A909F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2281037257557C200A909F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2281038257557C200A909F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D228103A257557C200A909F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7367KKMU64;
+				INFOPLIST_FILE = Dunno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mishak.Dunno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D228103B257557C200A909F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7367KKMU64;
+				INFOPLIST_FILE = Dunno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mishak.Dunno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D228101D257557C000A909F2 /* Build configuration list for PBXProject "Dunno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2281037257557C200A909F2 /* Debug */,
+				D2281038257557C200A909F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2281039257557C200A909F2 /* Build configuration list for PBXNativeTarget "Dunno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D228103A257557C200A909F2 /* Debug */,
+				D228103B257557C200A909F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D228102E257557C000A909F2 /* Dunno.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D228102F257557C000A909F2 /* Dunno.xcdatamodel */,
+			);
+			currentVersion = D228102F257557C000A909F2 /* Dunno.xcdatamodel */;
+			path = Dunno.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D228101A257557C000A909F2 /* Project object */;
+}
