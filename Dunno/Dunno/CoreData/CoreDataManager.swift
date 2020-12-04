@@ -66,9 +66,4 @@ class CoreDataManager {
     }
 }
 
-class UserData {
-    static let shared = UserData()
-    private init() {}
-    
-    var messages = [SavedMessage]()
-}
+

@@ -7,12 +7,9 @@
 
 import UIKit
 
-let dummyClasses = [Subject(name: "Math"),
-                    Subject(name: "Science"),
-                    Subject(name: "English"),
-                    Subject(name: "History")]
 
-class ClassViewController: UIViewController {
+
+class SubjectListViewController: UIViewController {
     private let viewModel = ClassViewModel()
     @IBOutlet private var tableView: UITableView!
     
@@ -25,7 +22,7 @@ class ClassViewController: UIViewController {
 }
 
 
-extension ClassViewController: UITableViewDelegate, UITableViewDataSource {
+extension SubjectListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfRows
     }
