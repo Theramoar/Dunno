@@ -14,6 +14,10 @@ class ClassCell: UITableViewCell {
             textLabel?.text = viewModel.className
         }
     }
+    
+    override func awakeFromNib() {
+        selectionStyle = .none
+    }
 }
 
 class ClassCellViewModel: CellViewModelType {

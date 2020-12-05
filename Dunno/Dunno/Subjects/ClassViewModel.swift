@@ -19,11 +19,11 @@ protocol CellViewModelType {}
 
 class ClassViewModel: TableViewViewModelType {
     var numberOfRows: Int {
-        dummyClasses.count
+        dummySubjects.count
     }
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelType? {
-        ClassCellViewModel(studyClass: dummyClasses[indexPath.row])
+        ClassCellViewModel(studyClass: dummySubjects[indexPath.row])
     }
     
     func viewModelForSelectedRow() -> DetailViewModelType? {

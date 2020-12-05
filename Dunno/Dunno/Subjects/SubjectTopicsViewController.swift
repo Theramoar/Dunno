@@ -14,6 +14,7 @@ class SubjectTopicsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
+        navigationItem.title = subject.name
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TopicCell")
@@ -31,5 +32,9 @@ extension SubjectTopicsViewController: UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = TopicViewController()
+        vc.topic = subject.topics[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  NetworkDataFetcher.swift
+//  AnswerCollectionView.swift
 //  Dunno
 //
 //  Created by Misha Kuznecov on 05/12/2020.
