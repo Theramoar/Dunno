@@ -47,7 +47,9 @@ extension TestViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = CGFloat(test!.test.questions[indexPath.row].answers.count / 2 * 50 + 100)
+        var numberOfAnswers = test!.test.questions[indexPath.row].answers.count
+        numberOfAnswers = numberOfAnswers % 2 == 0 ? numberOfAnswers : numberOfAnswers + 1
+        let height = CGFloat(numberOfAnswers / 2 * 50 + 100)
         return CGSize(width: UIScreen.main.bounds.width - 30, height: height)
     }
     
