@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ClassCell: UITableViewCell {
+class SubjectCell: UITableViewCell {
     weak var viewModel: ClassCellViewModel? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }

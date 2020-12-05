@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SubjectCell: UITableViewCell {
+class TopicCell: UITableViewCell {
     @IBOutlet weak var subjectLabel: UILabel!
     
     override func awakeFromNib() {
