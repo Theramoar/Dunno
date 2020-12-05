@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OO2-Xz-T6U" customClass="QuestionCell" customModule="Dunno" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="252" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bEP-XY-49T">
+                <rect key="frame" x="0.0" y="0.0" width="252" height="187"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="81Z-4s-e3L" customClass="AnswerCollectionView" customModule="Dunno" customModuleProvider="target">
+                        <rect key="frame" x="6" y="54" width="240" height="125"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="On0-BQ-ufe">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCl-Tk-8oH">
+                        <rect key="frame" x="20" y="10" width="212" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="81Z-4s-e3L" firstAttribute="top" secondItem="rCl-Tk-8oH" secondAttribute="bottom" constant="20" id="2yr-Zo-h7K"/>
+                    <constraint firstItem="rCl-Tk-8oH" firstAttribute="top" secondItem="bEP-XY-49T" secondAttribute="top" constant="10" id="4UQ-Fz-pzh"/>
+                    <constraint firstAttribute="trailing" secondItem="81Z-4s-e3L" secondAttribute="trailing" constant="6" id="65v-Fr-Ed5"/>
+                    <constraint firstAttribute="bottom" secondItem="81Z-4s-e3L" secondAttribute="bottom" constant="8" id="DvS-x6-MbD"/>
+                    <constraint firstAttribute="trailing" secondItem="rCl-Tk-8oH" secondAttribute="trailing" constant="20" id="KfQ-95-r3U"/>
+                    <constraint firstItem="81Z-4s-e3L" firstAttribute="leading" secondItem="bEP-XY-49T" secondAttribute="leading" constant="6" id="hsP-HH-Gxu"/>
+                    <constraint firstItem="rCl-Tk-8oH" firstAttribute="leading" secondItem="bEP-XY-49T" secondAttribute="leading" constant="20" id="zjR-hF-KJA"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="252" height="187"/>
+            <connections>
+                <outlet property="answerCollectionView" destination="81Z-4s-e3L" id="OBx-ep-wXN"/>
+                <outlet property="questionLabel" destination="rCl-Tk-8oH" id="n1v-Fx-gWz"/>
+            </connections>
+            <point key="canvasLocation" x="136.23188405797103" y="155.02232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
