@@ -25,6 +25,7 @@
 		D2629EF025757EDA0063DA6F /* ClassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EEF25757EDA0063DA6F /* ClassViewModel.swift */; };
 		D2629EF4257583E00063DA6F /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EF3257583E00063DA6F /* SubjectCell.swift */; };
 		D2629EF7257584160063DA6F /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EF6257584160063DA6F /* UserProfileViewController.swift */; };
+		D263BA03257C636D007814A7 /* PTMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D263BA02257C636C007814A7 /* PTMono-Regular.ttf */; };
 		D2A7B9FE257AD6070037A29C /* SubjectTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7B9FD257AD6070037A29C /* SubjectTopicsViewController.swift */; };
 		D2A7BA01257AD62D0037A29C /* SubjectTopicsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A7BA00257AD62D0037A29C /* SubjectTopicsView.xib */; };
 		D2A7BA09257ADAD90037A29C /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7BA08257ADAD90037A29C /* ChatListViewController.swift */; };
@@ -82,6 +83,7 @@
 		D2629EEF25757EDA0063DA6F /* ClassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewModel.swift; sourceTree = "<group>"; };
 		D2629EF3257583E00063DA6F /* SubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
 		D2629EF6257584160063DA6F /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		D263BA02257C636C007814A7 /* PTMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTMono-Regular.ttf"; sourceTree = "<group>"; };
 		D2A7B9FD257AD6070037A29C /* SubjectTopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTopicsViewController.swift; sourceTree = "<group>"; };
 		D2A7BA00257AD62D0037A29C /* SubjectTopicsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectTopicsView.xib; sourceTree = "<group>"; };
 		D2A7BA08257ADAD90037A29C /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				D2629EF9257586280063DA6F /* Subjects */,
 				D2AA5F12257963520092F869 /* User Profile */,
 				D2D5DB2E257AB6B4000FEA32 /* Chat View */,
+				D263BA02257C636C007814A7 /* PTMono-Regular.ttf */,
 				D2281031257557C200A909F2 /* Assets.xcassets */,
 				D2281033257557C200A909F2 /* LaunchScreen.storyboard */,
 				D2281036257557C200A909F2 /* Info.plist */,
@@ -357,6 +360,7 @@
 				D2D5DB34257AB6E7000FEA32 /* TopicViewController.xib in Resources */,
 				D2AA5F15257965BE0092F869 /* TopicCell.xib in Resources */,
 				D2A7BA0C257ADAEA0037A29C /* ChatListView.xib in Resources */,
+				D263BA03257C636D007814A7 /* PTMono-Regular.ttf in Resources */,
 				D2AA5F0E25795AA20092F869 /* UserProfileView.xib in Resources */,
 				D2E4EA11257C01B100E22B5B /* SubjectCell.xib in Resources */,
 				D2A7BA01257AD62D0037A29C /* SubjectTopicsView.xib in Resources */,

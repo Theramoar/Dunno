@@ -3,8 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PTMono-Regular.ttf">
+            <string>PTMono-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,16 +22,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAU-15-xrc">
-                        <rect key="frame" x="20" y="15" width="359" height="50"/>
+                        <rect key="frame" x="20" y="45" width="359" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSj-3W-jfw">
-                                <rect key="frame" x="8" y="15" width="343" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="8" y="15" width="343" height="20"/>
+                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="AppColor"/>
                         <constraints>
                             <constraint firstItem="eSj-3W-jfw" firstAttribute="leading" secondItem="PAU-15-xrc" secondAttribute="leading" constant="8" id="DqL-em-mVl"/>
                             <constraint firstItem="eSj-3W-jfw" firstAttribute="centerY" secondItem="PAU-15-xrc" secondAttribute="centerY" id="XzV-Jk-gIC"/>
@@ -37,9 +43,9 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="PAU-15-xrc" firstAttribute="leading" secondItem="SvD-mj-Oam" secondAttribute="leading" constant="20" symbolic="YES" id="08F-oU-ef6"/>
-                    <constraint firstAttribute="bottom" secondItem="PAU-15-xrc" secondAttribute="bottom" constant="10" id="G15-BY-qEQ"/>
+                    <constraint firstAttribute="bottom" secondItem="PAU-15-xrc" secondAttribute="bottom" constant="40" id="G15-BY-qEQ"/>
                     <constraint firstAttribute="trailing" secondItem="PAU-15-xrc" secondAttribute="trailing" constant="35" id="Zuy-aH-VZJ"/>
-                    <constraint firstItem="PAU-15-xrc" firstAttribute="top" secondItem="SvD-mj-Oam" secondAttribute="top" constant="15" id="s8b-EO-fSx"/>
+                    <constraint firstItem="PAU-15-xrc" firstAttribute="top" secondItem="SvD-mj-Oam" secondAttribute="top" constant="45" id="s8b-EO-fSx"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,4 +56,9 @@
             <point key="canvasLocation" x="140.57971014492756" y="87.723214285714278"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="AppColor">
+            <color red="0.0" green="0.43900001049041748" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

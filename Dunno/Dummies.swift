@@ -27,10 +27,10 @@ let dummyTests = [Test(topic: dummyTopics[0]),
                 Test(topic: dummyTopics[1]),
                 Test(topic: dummyTopics[2])]
 
-let dummySubjects = [Subject(name: "Math", topics: dummyMathTopics),
-                    Subject(name: "Science"),
-                    Subject(name: "English", topics: [dummyTopics[0]]),
-                    Subject(name: "History", topics: [dummyTopics[1]])]
+let dummySubjects = [Subject(name: "Math 👨‍🏫", topics: dummyMathTopics),
+                    Subject(name: "Science 👨‍🔬"),
+                    Subject(name: "English 💂‍♀️", topics: [dummyTopics[0]]),
+                    Subject(name: "History 👑", topics: [dummyTopics[1]])]
 let dummyTopics = [
     Topic(name: "Past Simple"),
     Topic(name: "Russia History")

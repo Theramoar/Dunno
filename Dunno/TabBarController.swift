@@ -7,7 +7,7 @@
 
 import UIKit
 
-
+let appColor = UIColor(named: "AppColor")
 
 class TabBarController: UITabBarController {
     private let userData: UserData = .shared
@@ -15,6 +15,14 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBar.backgroundColor = appColor
+        tabBar.isTranslucent = false
+        tabBar.isOpaque = false
+        
+        
+        tabBar.tintColor = .white
+        tabBar.barTintColor = appColor
+        
 //        createMockData()
         let messages = coreData.loadDataFromContainer(ofType: SavedMessage.self)
         userData.messages = messages
@@ -32,14 +40,18 @@ class TabBarController: UITabBarController {
         
         vc.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         vc.navigationController?.navigationBar.backgroundColor = .white
-        vc.navigationController?.navigationBar.tintColor = .black
-        vc.navigationItem.title = title
-        navVC.navigationBar.prefersLargeTitles = true
+        vc.navigationController?.navigationBar.tintColor = appColor
         
-        let logo = UIImage(named: "LogoCut")
-        let imageView = UIImageView(image:logo)
-        imageView.contentMode = UIView.ContentMode.scaleAspectFit
-        vc.navigationItem.titleView = imageView
+        let textAttributes = [NSAttributedString.Key.foregroundColor:appColor!,
+                              NSAttributedString.Key.font:UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize)!]
+        vc.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        vc.navigationItem.title = title
+//        navVC.navigationBar.prefersLargeTitles = true
+        
+//        let logo = UIImage(named: "LogoCut")
+//        let imageView = UIImageView(image:logo)
+//        imageView.contentMode = UIView.ContentMode.scaleAspectFit
+//        vc.navigationItem.titleView = imageView
         
         return navVC
     }

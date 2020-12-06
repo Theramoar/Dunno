@@ -14,6 +14,9 @@ class TopicCell: UITableViewCell {
     override func awakeFromNib() {
         selectionStyle = .none
         topicView.layer.cornerRadius = 10
+        topicView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        topicView.layer.shadowOpacity = 0.2
+        topicView.layer.shadowRadius = 3.0
     }
 }
 

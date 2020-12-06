@@ -29,6 +29,7 @@ class ChatViewController: UIViewController {
     private func setupTable() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "MessageCell")
         tableView.separatorStyle = .none
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))

@@ -17,9 +17,6 @@ class AddSubjectCell: UITableViewCell {
     
     override func awakeFromNib() {
         selectionStyle = .none
-        addButton.layer.cornerRadius = addButton.frame.width / 2
-        let image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 15, weight: .regular, scale: .large))?.withTintColor(.white, renderingMode: .alwaysOriginal)
-        addButton.setImage(image, for: .normal)
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
