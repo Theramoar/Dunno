@@ -35,16 +35,16 @@ class UserProfileViewController: UIViewController {
     
     private func setTableCorners() {
         let size = CGSize(width: 10, height: 10)
-        let shapeLayer = CAShapeLayer()
-        
-        shapeLayer.path = UIBezierPath(roundedRect: tableView.bounds, byRoundingCorners: [.topRight, .topLeft], cornerRadii: size).cgPath
+//        let shapeLayer = CAShapeLayer()
+//
+//        shapeLayer.path = UIBezierPath(roundedRect: tableView.bounds, byRoundingCorners: [ .topLeft, .topRight], cornerRadii: size).cgPath
         
         let labelShapeLayer = CAShapeLayer()
         labelShapeLayer.path = UIBezierPath(roundedRect: topicsLabel.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: size).cgPath
 
 //        viewForLayers.layer.mask = shapeLayer
-        tableView.layer.mask = shapeLayer
-//        tableView.layer.cornerRadius = 10
+//        tableView.layer.mask = shapeLayer
+        tableView.layer.cornerRadius = 10
         topicsLabel.layer.mask = labelShapeLayer
     }
     

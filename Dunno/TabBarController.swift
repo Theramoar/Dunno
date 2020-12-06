@@ -41,17 +41,15 @@ class TabBarController: UITabBarController {
         vc.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         vc.navigationController?.navigationBar.backgroundColor = .white
         vc.navigationController?.navigationBar.tintColor = appColor
+        navVC.navigationBar.shadowImage = UIImage()
+        
+        
+        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "SmallLogo"), style: .plain, target: nil, action: nil)
         
         let textAttributes = [NSAttributedString.Key.foregroundColor:appColor!,
                               NSAttributedString.Key.font:UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize)!]
         vc.navigationController?.navigationBar.titleTextAttributes = textAttributes
         vc.navigationItem.title = title
-//        navVC.navigationBar.prefersLargeTitles = true
-        
-//        let logo = UIImage(named: "LogoCut")
-//        let imageView = UIImageView(image:logo)
-//        imageView.contentMode = UIView.ContentMode.scaleAspectFit
-//        vc.navigationItem.titleView = imageView
         
         return navVC
     }

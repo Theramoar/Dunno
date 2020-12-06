@@ -12,7 +12,7 @@ class AnswerCell: UICollectionViewCell {
     var isAnswerSelected: Bool = false {
         didSet {
             print(isAnswerSelected)
-            contentView.backgroundColor = isSelected ? .orange : .systemIndigo
+            contentView.backgroundColor = isSelected ? .orange : appColor
         }
     }
     
