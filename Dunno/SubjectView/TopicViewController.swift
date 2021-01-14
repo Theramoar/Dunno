@@ -64,9 +64,6 @@ class TopicViewController: UIViewController {
         let cancel = UIAlertAction(title: "Cancel", style: .cancel)
         let takeTest = UIAlertAction(title: "Take test", style: .default) { [weak self] _ in
             let vc = TestViewController()
-//            vc.test = dummyTests.first {
-//                $0.topic.name == topic.name
-//            }
             self?.present(vc, animated: true)
         }
         alert.addAction(cancel)

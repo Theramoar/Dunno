@@ -60,6 +60,9 @@
 		D2E4EA11257C01B100E22B5B /* SubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2E4EA10257C01B100E22B5B /* SubjectCell.xib */; };
 		D2E51FFC257AC8D5006F1A47 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2E51FFA257AC8D5006F1A47 /* TestView.xib */; };
 		D2E51FFD257AC8D5006F1A47 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E51FFB257AC8D5006F1A47 /* TestViewController.swift */; };
+		D2F822BE25AF7DE100E7710E /* ActitivityIndicator Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F822BD25AF7DE100E7710E /* ActitivityIndicator Ext.swift */; };
+		D2F822C425AF7EEF00E7710E /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F822C325AF7EEF00E7710E /* TestViewModel.swift */; };
+		D2F822D825AF7FC700E7710E /* ViewModel Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F822D725AF7FC700E7710E /* ViewModel Types.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +121,9 @@
 		D2E4EA10257C01B100E22B5B /* SubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCell.xib; sourceTree = "<group>"; };
 		D2E51FFA257AC8D5006F1A47 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		D2E51FFB257AC8D5006F1A47 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		D2F822BD25AF7DE100E7710E /* ActitivityIndicator Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActitivityIndicator Ext.swift"; sourceTree = "<group>"; };
+		D2F822C325AF7EEF00E7710E /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		D2F822D725AF7FC700E7710E /* ViewModel Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel Types.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 			children = (
 				D2E51FFA257AC8D5006F1A47 /* TestView.xib */,
 				D2E51FFB257AC8D5006F1A47 /* TestViewController.swift */,
+				D2F822C325AF7EEF00E7710E /* TestViewModel.swift */,
 				D2B26640257B163100E8C7B6 /* QuestionCell.swift */,
 				D2B26646257B1E4500E8C7B6 /* AnswerCollectionView.swift */,
 				D2B26649257B22AF00E8C7B6 /* AnswerCell.xib */,
@@ -198,6 +205,7 @@
 				D2629EF9257586280063DA6F /* Subjects */,
 				D2AA5F12257963520092F869 /* User Profile */,
 				D2D5DB2E257AB6B4000FEA32 /* Chat View */,
+				D2F822C025AF7E5E00E7710E /* Supporting Files */,
 				D263BA02257C636C007814A7 /* PTMono-Regular.ttf */,
 				D2281031257557C200A909F2 /* Assets.xcassets */,
 				D2281033257557C200A909F2 /* LaunchScreen.storyboard */,
@@ -286,6 +294,15 @@
 				D2D5DB33257AB6E7000FEA32 /* TopicViewController.xib */,
 			);
 			path = SubjectView;
+			sourceTree = "<group>";
+		};
+		D2F822C025AF7E5E00E7710E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2F822BD25AF7DE100E7710E /* ActitivityIndicator Ext.swift */,
+				D2F822D725AF7FC700E7710E /* ViewModel Types.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +407,7 @@
 				D2B2665D257BCD8F00E8C7B6 /* RegisterViewController.swift in Sources */,
 				D2A7BA09257ADAD90037A29C /* ChatListViewController.swift in Sources */,
 				D2AA5F3525796CBA0092F869 /* MessageCell.swift in Sources */,
+				D2F822D825AF7FC700E7710E /* ViewModel Types.swift in Sources */,
 				D2629EF025757EDA0063DA6F /* ClassViewModel.swift in Sources */,
 				D2281026257557C000A909F2 /* AppDelegate.swift in Sources */,
 				D228104525757CC200A909F2 /* Subject.swift in Sources */,
@@ -404,7 +422,9 @@
 				D2AA5F3A257AAC6F0092F869 /* SavedMessage+CoreDataClass.swift in Sources */,
 				D2D5DB2C257AAEEB000FEA32 /* CoreDataManager.swift in Sources */,
 				D2B2664D257B3FD200E8C7B6 /* AnswerCell.swift in Sources */,
+				D2F822C425AF7EEF00E7710E /* TestViewModel.swift in Sources */,
 				D20E7B46257AC36C00EFB685 /* Test.swift in Sources */,
+				D2F822BE25AF7DE100E7710E /* ActitivityIndicator Ext.swift in Sources */,
 				D20E7B3C257ABE4F00EFB685 /* Student.swift in Sources */,
 				D2A7BA11257AFD840037A29C /* NetworkFetcher.swift in Sources */,
 				D2281028257557C000A909F2 /* SceneDelegate.swift in Sources */,

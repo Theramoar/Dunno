@@ -22,8 +22,7 @@ class TabBarController: UITabBarController {
         
         tabBar.tintColor = .white
         tabBar.barTintColor = appColor
-        
-//        createMockData()
+
         let messages = coreData.loadDataFromContainer(ofType: SavedMessage.self)
         userData.messages = messages
         viewControllers = [createVC(vc: SubjectListViewController(), image: UIImage(systemName: "books.vertical"), title: "Subjects"),

@@ -73,13 +73,4 @@ class LoginViewController: UIViewController {
 
 
 
-extension UIActivityIndicatorView {
-    func show(_ shown: Bool) {
-        isHidden = !shown
-        if shown {
-            startAnimating()
-        } else {
-            stopAnimating()
-        }
-    }
-}
+

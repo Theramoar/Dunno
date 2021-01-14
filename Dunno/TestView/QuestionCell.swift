@@ -10,13 +10,28 @@ import UIKit
 
 class QuestionCell: UICollectionViewCell {
     
-    @IBOutlet weak var questionLabel: UILabel!
-    var question: FetchedQuestion! {
-        didSet {
-            questionLabel.text = question.title
-            answerCollectionView.answers = question.answers
+    @IBOutlet private var questionLabel: UILabel!
+    @IBOutlet private var answerCollectionView: AnswerCollectionView!
+    
+    var viewModel: QuestionCellViewModel? {
+        willSet(viewModel) {
+            guard let viewModel = viewModel else { return }
+            questionLabel.text = viewModel.questionTitle
+            #warning("Use here viewModel Instead of question.answers")
+            answerCollectionView.answers = viewModel.question.answers
             answerCollectionView.reloadData()
         }
     }
-    @IBOutlet weak var answerCollectionView: AnswerCollectionView!
+}
+
+class QuestionCellViewModel: CellViewModelType {
+    var question: FetchedQuestion
+    
+    var questionTitle: String {
+        question.title
+    }
+    
+    init(question: FetchedQuestion) {
+        self.question = question
+    }
 }

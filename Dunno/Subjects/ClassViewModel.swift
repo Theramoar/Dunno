@@ -7,17 +7,11 @@
 
 import Foundation
 
-protocol TableViewViewModelType {
-    var numberOfRows: Int { get }
-    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelType?
-    func viewModelForSelectedRow() -> DetailViewModelType?
-    func selectRow(atIndexPath indexPath: IndexPath)
-}
-
-protocol DetailViewModelType {}
-protocol CellViewModelType {}
-
-class ClassViewModel: TableViewViewModelType {
+class ClassViewModel: TableViewModelType {
+    var numberOfSections: Int {
+        0
+    }
+    
     var numberOfRows: Int {
         dummySubjects.count
     }
