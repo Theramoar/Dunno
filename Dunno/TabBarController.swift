@@ -20,8 +20,11 @@ class TabBarController: UITabBarController {
         tabBar.isOpaque = false
         
         
-        tabBar.tintColor = .white
+        tabBar.tintColor = .orange
+        tabBar.unselectedItemTintColor = .white
         tabBar.barTintColor = appColor
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().shadowImage = UIImage()
 
         let messages = coreData.loadDataFromContainer(ofType: SavedMessage.self)
         userData.messages = messages
@@ -38,7 +41,7 @@ class TabBarController: UITabBarController {
         navVC.tabBarItem.title = title
         
         vc.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        vc.navigationController?.navigationBar.backgroundColor = .white
+        vc.navigationController?.navigationBar.backgroundColor = .systemBackground
         vc.navigationController?.navigationBar.tintColor = appColor
         navVC.navigationBar.shadowImage = UIImage()
         

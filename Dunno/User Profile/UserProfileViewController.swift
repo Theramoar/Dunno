@@ -22,7 +22,7 @@ class UserProfileViewController: UIViewController {
         userNameLabel.text = "Ivan Ivanov"
         setupUserImage()
         setupTable()
-        setTableCorners()
+
         userNameLabel.text = UserData.shared.userStudent.name
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.fill.xmark"), style: .plain, target: self, action: #selector(logoutPressed))
@@ -33,18 +33,22 @@ class UserProfileViewController: UIViewController {
         tableView.reloadData()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setTableCorners()
+    }
+    
     private func setTableCorners() {
         let size = CGSize(width: 10, height: 10)
-//        let shapeLayer = CAShapeLayer()
-//
-//        shapeLayer.path = UIBezierPath(roundedRect: tableView.bounds, byRoundingCorners: [ .topLeft, .topRight], cornerRadii: size).cgPath
+        let shapeLayer = CAShapeLayer()
+        
+        shapeLayer.path = UIBezierPath(roundedRect: tableView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: size).cgPath
         
         let labelShapeLayer = CAShapeLayer()
         labelShapeLayer.path = UIBezierPath(roundedRect: topicsLabel.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: size).cgPath
 
-//        viewForLayers.layer.mask = shapeLayer
-//        tableView.layer.mask = shapeLayer
-        tableView.layer.cornerRadius = 10
+        shapeLayer.frame = tableView.bounds
+        tableView.layer.mask = shapeLayer
         topicsLabel.layer.mask = labelShapeLayer
     }
     
@@ -60,7 +64,6 @@ class UserProfileViewController: UIViewController {
         userImageView.backgroundColor = .lightGray
         userImageView.layer.cornerRadius = userImageView.frame.width / 2
         userImageView.image = UIImage(named: "LogoTransparent")
-//        (systemName: "person")
     }
     
     @objc private func logoutPressed() {
@@ -78,20 +81,6 @@ class UserProfileViewController: UIViewController {
 }
 
 extension UserProfileViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        "Active Topics:"
-//    }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let view = UIView()
-//        view.backgroundColor = .white
-//        let label = UILabel()
-//        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-//        label.frame = CGRect(x: 8, y: 0, width: UIScreen.main.bounds.size.width, height: 30)
-//        label.text = "Active Topics:"
-//        view.addSubview(label)
-//        return view
-//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         UserData.shared.userStudent.mentors.count + 1
     }

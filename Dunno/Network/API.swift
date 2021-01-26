@@ -11,7 +11,7 @@ enum API: String {
     case scheme = "https"
     case host = "connectus.tech"
     enum Endpoints: String {
-        case endpoint = "/api/exam/1/conduct"
+        case endpoint = "/api/exam/2/conduct"
         case login = "/api/login"
     }
 }

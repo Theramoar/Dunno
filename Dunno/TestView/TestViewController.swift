@@ -8,7 +8,7 @@
 import UIKit
 
 class TestViewController: UIViewController {
-    var viewModel: TestViewModel!
+    var viewModel: TestViewModel = TestViewModel()
 
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var collectionViewView: UICollectionView!

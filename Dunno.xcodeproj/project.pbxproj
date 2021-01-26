@@ -12,6 +12,7 @@
 		D20E7B3C257ABE4F00EFB685 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E7B3B257ABE4F00EFB685 /* Student.swift */; };
 		D20E7B41257ABF5C00EFB685 /* ChooseMentorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D20E7B40257ABF5C00EFB685 /* ChooseMentorView.xib */; };
 		D20E7B46257AC36C00EFB685 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E7B45257AC36C00EFB685 /* Test.swift */; };
+		D21D73BC25C092C100C38966 /* EnterCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D21D73BB25C092C100C38966 /* EnterCodeView.xib */; };
 		D2281026257557C000A909F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2281025257557C000A909F2 /* AppDelegate.swift */; };
 		D2281028257557C000A909F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2281027257557C000A909F2 /* SceneDelegate.swift */; };
 		D228102A257557C000A909F2 /* SubjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2281029257557C000A909F2 /* SubjectListViewController.swift */; };
@@ -26,6 +27,7 @@
 		D2629EF4257583E00063DA6F /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EF3257583E00063DA6F /* SubjectCell.swift */; };
 		D2629EF7257584160063DA6F /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EF6257584160063DA6F /* UserProfileViewController.swift */; };
 		D263BA03257C636D007814A7 /* PTMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D263BA02257C636C007814A7 /* PTMono-Regular.ttf */; };
+		D2809BF725BF5105007D9BA4 /* EnterCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2809BF625BF5105007D9BA4 /* EnterCodeVC.swift */; };
 		D2A7B9FE257AD6070037A29C /* SubjectTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7B9FD257AD6070037A29C /* SubjectTopicsViewController.swift */; };
 		D2A7BA01257AD62D0037A29C /* SubjectTopicsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A7BA00257AD62D0037A29C /* SubjectTopicsView.xib */; };
 		D2A7BA09257ADAD90037A29C /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7BA08257ADAD90037A29C /* ChatListViewController.swift */; };
@@ -71,6 +73,7 @@
 		D20E7B3B257ABE4F00EFB685 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		D20E7B40257ABF5C00EFB685 /* ChooseMentorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseMentorView.xib; sourceTree = "<group>"; };
 		D20E7B45257AC36C00EFB685 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		D21D73BB25C092C100C38966 /* EnterCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterCodeView.xib; sourceTree = "<group>"; };
 		D2281022257557C000A909F2 /* Dunno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dunno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2281025257557C000A909F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2281027257557C000A909F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		D2629EF3257583E00063DA6F /* SubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
 		D2629EF6257584160063DA6F /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		D263BA02257C636C007814A7 /* PTMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTMono-Regular.ttf"; sourceTree = "<group>"; };
+		D2809BF625BF5105007D9BA4 /* EnterCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeVC.swift; sourceTree = "<group>"; };
 		D2A7B9FD257AD6070037A29C /* SubjectTopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTopicsViewController.swift; sourceTree = "<group>"; };
 		D2A7BA00257AD62D0037A29C /* SubjectTopicsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectTopicsView.xib; sourceTree = "<group>"; };
 		D2A7BA08257ADAD90037A29C /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 				D2281025257557C000A909F2 /* AppDelegate.swift */,
 				D20B7086257ACD3000CD5876 /* Dummies.swift */,
 				D2281027257557C000A909F2 /* SceneDelegate.swift */,
+				D2809BF625BF5105007D9BA4 /* EnterCodeVC.swift */,
+				D21D73BB25C092C100C38966 /* EnterCodeView.xib */,
 				D2B26662257BD50500E8C7B6 /* Login View */,
 				D2A7BA16257AFD980037A29C /* Network */,
 				D2A7BA05257ADA070037A29C /* CoreData */,
@@ -372,6 +378,7 @@
 				D2281032257557C200A909F2 /* Assets.xcassets in Resources */,
 				D2B2664A257B22AF00E8C7B6 /* AnswerCell.xib in Resources */,
 				D2B26660257BCDAC00E8C7B6 /* RegisterView.xib in Resources */,
+				D21D73BC25C092C100C38966 /* EnterCodeView.xib in Resources */,
 				D228104925757DD500A909F2 /* SubjectListView.xib in Resources */,
 				D2AA5F3225796CB30092F869 /* MessageCell.xib in Resources */,
 				D2D5DB34257AB6E7000FEA32 /* TopicViewController.xib in Resources */,
@@ -405,6 +412,7 @@
 				D2AA5F3B257AAC6F0092F869 /* SavedMessage+CoreDataProperties.swift in Sources */,
 				D228102A257557C000A909F2 /* SubjectListViewController.swift in Sources */,
 				D2B2665D257BCD8F00E8C7B6 /* RegisterViewController.swift in Sources */,
+				D2809BF725BF5105007D9BA4 /* EnterCodeVC.swift in Sources */,
 				D2A7BA09257ADAD90037A29C /* ChatListViewController.swift in Sources */,
 				D2AA5F3525796CBA0092F869 /* MessageCell.swift in Sources */,
 				D2F822D825AF7FC700E7710E /* ViewModel Types.swift in Sources */,
@@ -567,7 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7367KKMU64;
 				INFOPLIST_FILE = Dunno/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -587,7 +595,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7367KKMU64;
 				INFOPLIST_FILE = Dunno/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
