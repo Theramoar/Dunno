@@ -16,11 +16,26 @@ class SubjectListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTable()
+        setupNavigation()
+    }
+    
+    private func setupTable() {
         tableView.register(UINib(nibName: "SubjectCell", bundle: nil), forCellReuseIdentifier: "SubjectCell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        
+    }
+    
+    private func setupNavigation() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTest))
+    }
+    
+    
+    @objc private func addTest() {
+        let vc = EnterCodeViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
     }
 }
 
@@ -38,8 +53,8 @@ extension SubjectListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = SubjectTopicsViewController()
-        vc.subject = subjects[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
+        let vc = TestPrepViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
     }
 }

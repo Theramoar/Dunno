@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB397AD725C09E51001B4A20 /* TestPrepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB397AD625C09E51001B4A20 /* TestPrepVC.swift */; };
+		BB397ADA25C09E7A001B4A20 /* TestPrepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB397AD925C09E7A001B4A20 /* TestPrepView.xib */; };
 		D20B7084257ACB8700CD5876 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B7083257ACB8700CD5876 /* UserData.swift */; };
 		D20B7087257ACD3000CD5876 /* Dummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B7086257ACD3000CD5876 /* Dummies.swift */; };
 		D20E7B3C257ABE4F00EFB685 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E7B3B257ABE4F00EFB685 /* Student.swift */; };
@@ -68,6 +70,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB397AD625C09E51001B4A20 /* TestPrepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPrepVC.swift; sourceTree = "<group>"; };
+		BB397AD925C09E7A001B4A20 /* TestPrepView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestPrepView.xib; sourceTree = "<group>"; };
 		D20B7083257ACB8700CD5876 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D20B7086257ACD3000CD5876 /* Dummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummies.swift; sourceTree = "<group>"; };
 		D20E7B3B257ABE4F00EFB685 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				D2281025257557C000A909F2 /* AppDelegate.swift */,
 				D20B7086257ACD3000CD5876 /* Dummies.swift */,
 				D2281027257557C000A909F2 /* SceneDelegate.swift */,
+				BB397AD625C09E51001B4A20 /* TestPrepVC.swift */,
+				BB397AD925C09E7A001B4A20 /* TestPrepView.xib */,
 				D2809BF625BF5105007D9BA4 /* EnterCodeVC.swift */,
 				D21D73BB25C092C100C38966 /* EnterCodeView.xib */,
 				D2B26662257BD50500E8C7B6 /* Login View */,
@@ -207,7 +213,7 @@
 				D228103D2575598B00A909F2 /* TabBarController.swift */,
 				D20E7B4F257AC87200EFB685 /* TestView */,
 				D20E7B44257AC35700EFB685 /* ChooseMentorView */,
-				D2D5DB37257ABAC9000FEA32 /* SubjectView */,
+				D2D5DB37257ABAC9000FEA32 /* TopicView */,
 				D2629EF9257586280063DA6F /* Subjects */,
 				D2AA5F12257963520092F869 /* User Profile */,
 				D2D5DB2E257AB6B4000FEA32 /* Chat View */,
@@ -293,13 +299,13 @@
 			path = "Chat View";
 			sourceTree = "<group>";
 		};
-		D2D5DB37257ABAC9000FEA32 /* SubjectView */ = {
+		D2D5DB37257ABAC9000FEA32 /* TopicView */ = {
 			isa = PBXGroup;
 			children = (
 				D2D5DB2F257AB6DA000FEA32 /* TopicViewController.swift */,
 				D2D5DB33257AB6E7000FEA32 /* TopicViewController.xib */,
 			);
-			path = SubjectView;
+			path = TopicView;
 			sourceTree = "<group>";
 		};
 		D2F822C025AF7E5E00E7710E /* Supporting Files */ = {
@@ -368,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB397ADA25C09E7A001B4A20 /* TestPrepView.xib in Resources */,
 				D2E51FFC257AC8D5006F1A47 /* TestView.xib in Resources */,
 				D2B26644257B1CDD00E8C7B6 /* QuestionCell.xib in Resources */,
 				D2B2665A257BCAAE00E8C7B6 /* LoginView.xib in Resources */,
@@ -433,6 +440,7 @@
 				D2F822C425AF7EEF00E7710E /* TestViewModel.swift in Sources */,
 				D20E7B46257AC36C00EFB685 /* Test.swift in Sources */,
 				D2F822BE25AF7DE100E7710E /* ActitivityIndicator Ext.swift in Sources */,
+				BB397AD725C09E51001B4A20 /* TestPrepVC.swift in Sources */,
 				D20E7B3C257ABE4F00EFB685 /* Student.swift in Sources */,
 				D2A7BA11257AFD840037A29C /* NetworkFetcher.swift in Sources */,
 				D2281028257557C000A909F2 /* SceneDelegate.swift in Sources */,

@@ -28,7 +28,7 @@ class TabBarController: UITabBarController {
 
         let messages = coreData.loadDataFromContainer(ofType: SavedMessage.self)
         userData.messages = messages
-        viewControllers = [createVC(vc: SubjectListViewController(), image: UIImage(systemName: "books.vertical"), title: "Subjects"),
+        viewControllers = [createVC(vc: SubjectListViewController(), image: UIImage(systemName: "books.vertical"), title: "Active tests"),
                            createVC(vc: ChatListViewController(), image: UIImage(systemName: "message"), title: "Chats"),
                            createVC(vc: UserProfileViewController(), image: UIImage(systemName: "person"), title: "User profile")]
     }
@@ -39,20 +39,7 @@ class TabBarController: UITabBarController {
         let navVC = UINavigationController(rootViewController: vc)
         navVC.tabBarItem.image = image
         navVC.tabBarItem.title = title
-        
-        vc.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        vc.navigationController?.navigationBar.backgroundColor = .systemBackground
-        vc.navigationController?.navigationBar.tintColor = appColor
-        navVC.navigationBar.shadowImage = UIImage()
-        
-        
-        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "SmallLogo"), style: .plain, target: nil, action: nil)
-        
-        let textAttributes = [NSAttributedString.Key.foregroundColor:appColor!,
-                              NSAttributedString.Key.font:UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize)!]
-        vc.navigationController?.navigationBar.titleTextAttributes = textAttributes
-        vc.navigationItem.title = title
-        
+        vc.setAppNavigationBar(title: title)
         return navVC
     }
     
@@ -63,3 +50,21 @@ class TabBarController: UITabBarController {
         _ = CoreDataManager.shared.saveMessage(direction: .outbound, message: "Will you teach me, Mentor?", colocutor: "Slavik", date: Date())
     }
 }
+
+extension UIViewController {
+    func setAppNavigationBar(title: String) {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.backgroundColor = .systemBackground
+        navigationController?.navigationBar.tintColor = appColor
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "SmallLogo"), style: .plain, target: nil, action: nil)
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor:appColor!,
+                              NSAttributedString.Key.font:UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize)!]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationItem.title = title
+    }
+}
+

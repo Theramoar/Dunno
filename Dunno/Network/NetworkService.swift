@@ -20,10 +20,6 @@ class NetworkService {
         let data = params != nil ? prepareJSONData(params: params!) : nil
         let request = createRequest(type: type, url: url, body: data, authHeader: authHeader)
         let task = createDataTask(from: request) { (data, error) in
-            
-            let test = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-            print(test)
-            
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No Data")
                 return
