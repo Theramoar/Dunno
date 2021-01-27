@@ -28,9 +28,9 @@ class TabBarController: UITabBarController {
 
         let messages = coreData.loadDataFromContainer(ofType: SavedMessage.self)
         userData.messages = messages
-        viewControllers = [createVC(vc: SubjectListViewController(), image: UIImage(systemName: "books.vertical"), title: "Active tests"),
-                           createVC(vc: ChatListViewController(), image: UIImage(systemName: "message"), title: "Chats"),
-                           createVC(vc: UserProfileViewController(), image: UIImage(systemName: "person"), title: "User profile")]
+        viewControllers = [createVC(vc: SubjectListViewController(), image: UIImage(systemName: "books.vertical"), title: "Active tests")]
+//        createVC(vc: UserProfileViewController(), image: UIImage(systemName: "person"), title: "User profile")
+//        createVC(vc: ChatListViewController(), image: UIImage(systemName: "message"), title: "Chats")
     }
     
     

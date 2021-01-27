@@ -7,11 +7,8 @@
 
 import UIKit
 
-
-
 class SubjectListViewController: UIViewController {
     private let viewModel = ClassViewModel()
-    var subjects = dummySubjects
     @IBOutlet private var tableView: UITableView!
     
     override func viewDidLoad() {
