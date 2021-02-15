@@ -3,14 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="PTMono-Regular.ttf">
-            <string>PTMono-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,62 +17,72 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAU-15-xrc">
-                        <rect key="frame" x="20" y="25" width="374" height="148"/>
+                        <rect key="frame" x="20" y="10" width="374" height="173"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Vp-MP-Lxo">
-                                <rect key="frame" x="20" y="15" width="334" height="118"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Vp-MP-Lxo">
+                                <rect key="frame" x="15" y="15" width="186" height="143"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSj-3W-jfw">
-                                        <rect key="frame" x="146" y="0.0" width="42" height="67"/>
-                                        <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="122"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test starts on December 10, 2020; 15:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDW-j8-EJg">
-                                        <rect key="frame" x="49" y="77" width="236" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="13"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From 24.10.2019 to 25.10.2019" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDW-j8-EJg">
+                                        <rect key="frame" x="0.0" y="127" width="186" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Test is closed on December 10, 2020; 15:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uU-Ga-hdw">
-                                        <rect key="frame" x="39.5" y="102.5" width="255" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="13"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9dt-oj-OkF">
+                                <rect key="frame" x="291.5" y="76.5" width="67.5" height="20.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="usr-sS-fkL">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="PsI-kT-Rtj"/>
+                                            <constraint firstAttribute="width" constant="20" id="bOL-UI-QCX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-gs-vDa">
+                                        <rect key="frame" x="28" y="0.0" width="39.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.22745098039215686" green="0.4392156862745098" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="AppColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4Vp-MP-Lxo" firstAttribute="centerY" secondItem="PAU-15-xrc" secondAttribute="centerY" id="5Ux-cr-mjL"/>
-                            <constraint firstAttribute="bottom" secondItem="4Vp-MP-Lxo" secondAttribute="bottom" constant="15" id="9Il-2o-cJf"/>
-                            <constraint firstAttribute="trailing" secondItem="4Vp-MP-Lxo" secondAttribute="trailing" constant="20" id="DzG-JF-QcI"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="YTP-qB-yzW"/>
-                            <constraint firstItem="4Vp-MP-Lxo" firstAttribute="leading" secondItem="PAU-15-xrc" secondAttribute="leading" constant="20" id="eGz-Fu-i7h"/>
-                            <constraint firstItem="4Vp-MP-Lxo" firstAttribute="top" secondItem="PAU-15-xrc" secondAttribute="top" constant="15" id="xFf-Tl-Lx3"/>
+                            <constraint firstAttribute="trailing" secondItem="9dt-oj-OkF" secondAttribute="trailing" constant="15" id="8n3-TE-uac"/>
+                            <constraint firstAttribute="bottom" secondItem="4Vp-MP-Lxo" secondAttribute="bottom" constant="15" id="9xc-Jo-aba"/>
+                            <constraint firstItem="4Vp-MP-Lxo" firstAttribute="top" secondItem="PAU-15-xrc" secondAttribute="top" constant="15" id="GBx-Ea-Nx5"/>
+                            <constraint firstItem="4Vp-MP-Lxo" firstAttribute="leading" secondItem="PAU-15-xrc" secondAttribute="leading" constant="15" id="Zr2-0W-COf"/>
+                            <constraint firstItem="9dt-oj-OkF" firstAttribute="centerY" secondItem="PAU-15-xrc" secondAttribute="centerY" id="fzT-Yc-9Pq"/>
                         </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="PAU-15-xrc" firstAttribute="leading" secondItem="SvD-mj-Oam" secondAttribute="leading" constant="20" symbolic="YES" id="08F-oU-ef6"/>
-                    <constraint firstAttribute="bottom" secondItem="PAU-15-xrc" secondAttribute="bottom" constant="20" id="G15-BY-qEQ"/>
+                    <constraint firstAttribute="bottom" secondItem="PAU-15-xrc" secondAttribute="bottom" constant="10" id="G15-BY-qEQ"/>
                     <constraint firstAttribute="trailing" secondItem="PAU-15-xrc" secondAttribute="trailing" constant="20" id="Zuy-aH-VZJ"/>
-                    <constraint firstItem="PAU-15-xrc" firstAttribute="top" secondItem="SvD-mj-Oam" secondAttribute="top" constant="25" id="s8b-EO-fSx"/>
+                    <constraint firstItem="PAU-15-xrc" firstAttribute="top" secondItem="SvD-mj-Oam" secondAttribute="top" constant="10" id="s8b-EO-fSx"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="nameLabel" destination="eSj-3W-jfw" id="hzV-GM-hHl"/>
                 <outlet property="subjectView" destination="PAU-15-xrc" id="rf5-06-yGN"/>
+                <outlet property="timerImageView" destination="usr-sS-fkL" id="ZaH-JQ-JFv"/>
             </connections>
-            <point key="canvasLocation" x="140.57971014492756" y="124.21875"/>
+            <point key="canvasLocation" x="139" y="95"/>
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="AppColor">
-            <color red="0.0" green="0.43900001049041748" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

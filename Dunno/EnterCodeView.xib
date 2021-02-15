@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,19 +20,32 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter test code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZ2-52-mHM">
-                    <rect key="frame" x="98" y="331" width="219" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZ2-52-mHM">
+                    <rect key="frame" x="20" y="363" width="374" height="18.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcT-wu-w2T">
-                    <rect key="frame" x="132" y="444" width="150" height="60"/>
-                    <color key="backgroundColor" name="AppColor"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Locked" translatesAutoresizingMaskIntoConstraints="NO" id="lAV-d4-wJC">
+                    <rect key="frame" x="82" y="54" width="250" height="250"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="v7S-ws-1TB"/>
-                        <constraint firstAttribute="height" constant="60" id="wFW-cL-ILq"/>
+                        <constraint firstAttribute="width" constant="250" id="Dcu-cB-Msi"/>
+                        <constraint firstAttribute="height" constant="250" id="e9e-Mj-eYQ"/>
                     </constraints>
-                    <state key="normal" title="Start test">
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter test code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-ph-ox9">
+                    <rect key="frame" x="20" y="324" width="143" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcT-wu-w2T">
+                    <rect key="frame" x="20" y="782" width="374" height="60"/>
+                    <color key="backgroundColor" red="0.56078431370000004" green="0.64705882349999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="yAd-zp-374"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <state key="normal" title="ADD TEST">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -44,19 +56,22 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="iZ2-52-mHM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="98" id="EUR-CL-hKA"/>
-                <constraint firstItem="WcT-wu-w2T" firstAttribute="top" secondItem="iZ2-52-mHM" secondAttribute="bottom" constant="79" id="Zpt-yg-evf"/>
-                <constraint firstItem="iZ2-52-mHM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="jGy-3o-l5l"/>
-                <constraint firstItem="WcT-wu-w2T" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l0L-wB-C10"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iZ2-52-mHM" secondAttribute="trailing" constant="97" id="mZM-gN-qSY"/>
+                <constraint firstItem="lAV-d4-wJC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="3df-Kg-sw9"/>
+                <constraint firstItem="iZ2-52-mHM" firstAttribute="top" secondItem="vTy-ph-ox9" secondAttribute="bottom" constant="15" id="7rn-Ye-M4P"/>
+                <constraint firstItem="vTy-ph-ox9" firstAttribute="top" secondItem="lAV-d4-wJC" secondAttribute="bottom" constant="20" id="EK7-im-ZGl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WcT-wu-w2T" secondAttribute="trailing" constant="20" id="Sjq-xs-n4s"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iZ2-52-mHM" secondAttribute="trailing" constant="20" id="Xy7-Kt-od3"/>
+                <constraint firstItem="WcT-wu-w2T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="dqt-wl-1yA"/>
+                <constraint firstItem="iZ2-52-mHM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hjn-Da-n6h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WcT-wu-w2T" secondAttribute="bottom" constant="20" id="rU5-9i-Nfe"/>
+                <constraint firstItem="lAV-d4-wJC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sb2-Lu-WWz"/>
+                <constraint firstItem="vTy-ph-ox9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wsd-mA-i9b"/>
             </constraints>
             <point key="canvasLocation" x="-288.40579710144931" y="153.34821428571428"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="AppColor">
-            <color red="0.0" green="0.43900001049041748" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="Locked" width="325" height="325"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

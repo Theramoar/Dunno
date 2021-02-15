@@ -8,8 +8,9 @@
 import UIKit
 
 class SubjectCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var subjectView: UIView!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var subjectView: UIView!
+    @IBOutlet private var timerImageView: UIImageView!
     weak var viewModel: SubjectCellViewModel? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
@@ -20,6 +21,7 @@ class SubjectCell: UITableViewCell {
     override func awakeFromNib() {
         selectionStyle = .none
         subjectView.layer.cornerRadius = 10
+        timerImageView.image = UIImage(systemName: "clock")?.withTintColor(UIColor(named: "AppColor")!, renderingMode: .alwaysOriginal)
     }
 }
 

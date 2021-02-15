@@ -24,14 +24,14 @@
 		D228103E2575598B00A909F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228103D2575598B00A909F2 /* TabBarController.swift */; };
 		D228104225755B1200A909F2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228104125755B1200A909F2 /* ChatViewController.swift */; };
 		D228104525757CC200A909F2 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228104425757CC200A909F2 /* Subject.swift */; };
-		D228104925757DD500A909F2 /* SubjectListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D228104825757DD500A909F2 /* SubjectListView.xib */; };
+		D228104925757DD500A909F2 /* SubjectListView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D228104825757DD500A909F2 /* SubjectListView1.xib */; };
 		D2629EF025757EDA0063DA6F /* ClassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EEF25757EDA0063DA6F /* ClassViewModel.swift */; };
 		D2629EF4257583E00063DA6F /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EF3257583E00063DA6F /* SubjectCell.swift */; };
 		D2629EF7257584160063DA6F /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629EF6257584160063DA6F /* UserProfileViewController.swift */; };
 		D263BA03257C636D007814A7 /* PTMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D263BA02257C636C007814A7 /* PTMono-Regular.ttf */; };
 		D2809BF725BF5105007D9BA4 /* EnterCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2809BF625BF5105007D9BA4 /* EnterCodeVC.swift */; };
 		D2A7B9FE257AD6070037A29C /* SubjectTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7B9FD257AD6070037A29C /* SubjectTopicsViewController.swift */; };
-		D2A7BA01257AD62D0037A29C /* SubjectTopicsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A7BA00257AD62D0037A29C /* SubjectTopicsView.xib */; };
+		D2A7BA01257AD62D0037A29C /* SubjectListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A7BA00257AD62D0037A29C /* SubjectListView.xib */; };
 		D2A7BA09257ADAD90037A29C /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7BA08257ADAD90037A29C /* ChatListViewController.swift */; };
 		D2A7BA0C257ADAEA0037A29C /* ChatListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A7BA0B257ADAEA0037A29C /* ChatListView.xib */; };
 		D2A7BA11257AFD840037A29C /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7BA10257AFD840037A29C /* NetworkFetcher.swift */; };
@@ -89,14 +89,14 @@
 		D228103D2575598B00A909F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D228104125755B1200A909F2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		D228104425757CC200A909F2 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
-		D228104825757DD500A909F2 /* SubjectListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectListView.xib; sourceTree = "<group>"; };
+		D228104825757DD500A909F2 /* SubjectListView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectListView1.xib; sourceTree = "<group>"; };
 		D2629EEF25757EDA0063DA6F /* ClassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewModel.swift; sourceTree = "<group>"; };
 		D2629EF3257583E00063DA6F /* SubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
 		D2629EF6257584160063DA6F /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		D263BA02257C636C007814A7 /* PTMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTMono-Regular.ttf"; sourceTree = "<group>"; };
 		D2809BF625BF5105007D9BA4 /* EnterCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeVC.swift; sourceTree = "<group>"; };
 		D2A7B9FD257AD6070037A29C /* SubjectTopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTopicsViewController.swift; sourceTree = "<group>"; };
-		D2A7BA00257AD62D0037A29C /* SubjectTopicsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectTopicsView.xib; sourceTree = "<group>"; };
+		D2A7BA00257AD62D0037A29C /* SubjectListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectListView.xib; sourceTree = "<group>"; };
 		D2A7BA08257ADAD90037A29C /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		D2A7BA0B257ADAEA0037A29C /* ChatListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListView.xib; sourceTree = "<group>"; };
 		D2A7BA10257AFD840037A29C /* NetworkFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcher.swift; sourceTree = "<group>"; };
@@ -232,10 +232,10 @@
 				D2281029257557C000A909F2 /* SubjectListViewController.swift */,
 				D2629EF3257583E00063DA6F /* SubjectCell.swift */,
 				D2E4EA10257C01B100E22B5B /* SubjectCell.xib */,
+				D2A7BA00257AD62D0037A29C /* SubjectListView.xib */,
 				D2A7B9FD257AD6070037A29C /* SubjectTopicsViewController.swift */,
-				D2A7BA00257AD62D0037A29C /* SubjectTopicsView.xib */,
 				D2629EEF25757EDA0063DA6F /* ClassViewModel.swift */,
-				D228104825757DD500A909F2 /* SubjectListView.xib */,
+				D228104825757DD500A909F2 /* SubjectListView1.xib */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -386,7 +386,7 @@
 				D2B2664A257B22AF00E8C7B6 /* AnswerCell.xib in Resources */,
 				D2B26660257BCDAC00E8C7B6 /* RegisterView.xib in Resources */,
 				D21D73BC25C092C100C38966 /* EnterCodeView.xib in Resources */,
-				D228104925757DD500A909F2 /* SubjectListView.xib in Resources */,
+				D228104925757DD500A909F2 /* SubjectListView1.xib in Resources */,
 				D2AA5F3225796CB30092F869 /* MessageCell.xib in Resources */,
 				D2D5DB34257AB6E7000FEA32 /* TopicViewController.xib in Resources */,
 				D2AA5F15257965BE0092F869 /* TopicCell.xib in Resources */,
@@ -394,7 +394,7 @@
 				D263BA03257C636D007814A7 /* PTMono-Regular.ttf in Resources */,
 				D2AA5F0E25795AA20092F869 /* UserProfileView.xib in Resources */,
 				D2E4EA11257C01B100E22B5B /* SubjectCell.xib in Resources */,
-				D2A7BA01257AD62D0037A29C /* SubjectTopicsView.xib in Resources */,
+				D2A7BA01257AD62D0037A29C /* SubjectListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

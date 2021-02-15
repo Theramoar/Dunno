@@ -61,10 +61,10 @@ extension UIViewController {
         
 //        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "SmallLogo"), style: .plain, target: nil, action: nil)
         
-        let textAttributes = [NSAttributedString.Key.foregroundColor:appColor!,
-                              NSAttributedString.Key.font:UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize)!]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        navigationItem.title = title
+//        let textAttributes = [NSAttributedString.Key.foregroundColor:appColor!,
+//                              NSAttributedString.Key.font:UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize)!]
+//        navigationController?.navigationBar.titleTextAttributes = textAttributes
+//        navigationItem.title = title
     }
 }
 

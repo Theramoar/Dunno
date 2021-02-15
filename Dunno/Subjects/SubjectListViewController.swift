@@ -10,11 +10,27 @@ import UIKit
 class SubjectListViewController: UIViewController {
     private let viewModel = ClassViewModel()
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var layerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
         setupNavigation()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setTableCorners()
+    }
+    
+    private func setTableCorners() {
+        let size = CGSize(width: 30, height: 30)
+        let shapeLayer = CAShapeLayer()
+        
+        shapeLayer.path = UIBezierPath(roundedRect: layerView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: size).cgPath
+
+        layerView.layer.mask = shapeLayer
+//        tableView.layer.mask = shapeLayer
     }
     
     private func setupTable() {
