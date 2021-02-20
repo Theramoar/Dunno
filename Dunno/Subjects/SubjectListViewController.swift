@@ -30,7 +30,6 @@ class SubjectListViewController: UIViewController {
         shapeLayer.path = UIBezierPath(roundedRect: layerView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: size).cgPath
 
         layerView.layer.mask = shapeLayer
-//        tableView.layer.mask = shapeLayer
     }
     
     private func setupTable() {
@@ -66,8 +65,15 @@ extension SubjectListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = TestPrepViewController()
-        let navVC = UINavigationController(rootViewController: vc)
-        present(navVC, animated: true)
+        viewModel.selectRow(atIndexPath: indexPath)
+        if viewModel.userIsAlreadyRegisteredForTest() {
+            let vc = TestViewController()
+            vc.viewModel = viewModel.viewModelForTestView()
+            present(vc, animated: true)
+        } else {
+            let vc = TestPrepViewController()
+            vc.viewModel = viewModel.viewModelForTestPrepView()
+            present(vc, animated: true)
+        }
     }
 }

@@ -13,7 +13,7 @@ struct Colors {
 }
 
 class TestPrepViewController: UIViewController, UITextFieldDelegate {
-    
+    var viewModel: TestPrepViewModel!
     @IBOutlet private var enterNameTextField: UITextField!
     @IBOutlet private var startTestButton: UIButton!
     @IBOutlet private var countdownLabel: UILabel!
@@ -36,8 +36,44 @@ class TestPrepViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction private func startTestButtonPressed(_ sender: Any) {
-        let vc = TestViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        guard let name = enterNameTextField.text, !name.isEmpty else {
+            presentErrorAlert(title: "Name is empty!", message: "Please enter your name.")
+            return
+        }
+        viewModel.registerForTest(withName: name) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(_):
+                let vc = TestViewController()
+                vc.viewModel = self.viewModel.viewModelForTestView()
+                self.navigationController?.pushViewController(vc, animated: true)
+            case .failure(let error):
+                var title = ""
+                var message = ""
+                switch error {
+                case .badURL:
+                    title = "Internal error occured"
+                    message = "Please contact the support team"
+                case .noResponse:
+                    title = "Network error"
+                    message = "Please, try again later"
+                case .validationErrorCode:
+                    title = "Entered name is incorrect"
+                    message = "Please, enter antoher name"
+                case .serverErrorCode:
+                    title = "Server error"
+                    message = "Please, try again later"
+                case .noData:
+                    title = "The test was deleted"
+                    message = "Please, enter another code"
+                case .failDecoding:
+                    title = "Internal error occured"
+                    message = "Please contact the support team"
+                }
+                self.presentErrorAlert(title: title, message: message)
+            }
+        }
+        
     }
     
     private func setupTextField() {
@@ -76,4 +112,48 @@ class TestPrepViewController: UIViewController, UITextFieldDelegate {
 
             return false
         }
+}
+
+class TestPrepViewModel {
+    var test: Test
+    let network = NetworkDataFetcher()
+    let coreData: CoreDataManager = .shared
+    let userData: UserData = .shared
+    
+    init(test: Test) {
+        self.test = test
+    }
+    
+    func registerForTest(withName name: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
+
+        guard let code = test.code else { return }
+        network.registerForTest(withCode: code, name: name) { [weak self] response in
+            guard let self = self else { return }
+            print("registerForTest")
+            switch response {
+            case .success(let testInfo):
+                let testId = testInfo.0
+                let accessToken = testInfo.1
+                self.updateTestWith(id: testId)
+                self.save(authToken: accessToken)
+                completion(.success(""))
+                break
+            case .failure(let error):
+                completion(.failure(error))
+                break
+            }
+        }
+    }
+    
+    func updateTestWith(id: Int) {
+        coreData.updateTestWith(id: id, test: test)
+    }
+    
+    func save(authToken: String) {
+        userData.authToken = authToken
+    }
+    
+    func viewModelForTestView() -> TestViewModel {
+        TestViewModel(test: test)
+    }
 }

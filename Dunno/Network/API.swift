@@ -9,9 +9,9 @@ import Foundation
 
 enum API: String {
     case scheme = "https"
-    case host = "connectus.tech"
+    case host = "dunno.social"
+    
     enum Endpoints: String {
-        case endpoint = "/api/exam/2/conduct"
         case login = "/api/login"
     }
 }

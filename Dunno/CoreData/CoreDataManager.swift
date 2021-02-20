@@ -41,18 +41,36 @@ class CoreDataManager {
         return data
     }
     
-    func saveMessage(direction: Direction, message: String, colocutor: String, date: Date?) -> SavedMessage? {
-        guard let entity = NSEntityDescription.entity(forEntityName: "SavedMessage", in: context) else { return nil }
-        let coreDataMessage = NSManagedObject(entity: entity, insertInto: context) as! SavedMessage
-        coreDataMessage.body = message
-        coreDataMessage.colocutor = colocutor
-        coreDataMessage.setDirection(direction)
-        coreDataMessage.date = date
+    func saveTest(title: String, code: String, fromDate: Date, toDate: Date) -> Test? {
+        guard let entity = NSEntityDescription.entity(forEntityName: "Test", in: context) else { return nil}
+        let test = NSManagedObject(entity: entity, insertInto: context) as! Test
+        
+        test.title = title
+        test.activeFrom = fromDate
+        test.activeTo = toDate
+        test.code = code
         saveContext()
-
-        userData.messages.append(coreDataMessage)
-        return coreDataMessage
+        userData.tests.append(test)
+        return test
     }
+    
+    func updateTestWith(id: Int, test: Test) {
+        test.testId = String(id)
+        saveContext()
+    }
+    
+//    func saveMessage(direction: Direction, message: String, colocutor: String, date: Date?) -> SavedMessage? {
+//        guard let entity = NSEntityDescription.entity(forEntityName: "SavedMessage", in: context) else { return nil }
+//        let coreDataMessage = NSManagedObject(entity: entity, insertInto: context) as! SavedMessage
+//        coreDataMessage.body = message
+//        coreDataMessage.colocutor = colocutor
+//        coreDataMessage.setDirection(direction)
+//        coreDataMessage.date = date
+//        saveContext()
+//
+//        userData.messages.append(coreDataMessage)
+//        return coreDataMessage
+//    }
     
     
     private func saveContext() {

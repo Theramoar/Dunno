@@ -31,12 +31,12 @@
                     <rect key="frame" x="0.0" y="324" width="414" height="572"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4GL-Jn-QOY">
-                            <rect key="frame" x="0.0" y="64" width="414" height="468"/>
+                            <rect key="frame" x="0.0" y="74" width="414" height="458"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMi-OE-UWy">
-                            <rect key="frame" x="15" y="15" width="149.5" height="34"/>
+                            <rect key="frame" x="20" y="25" width="149.5" height="34"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -45,9 +45,9 @@
                     <color key="backgroundColor" red="0.50588235294117645" green="0.67843137254901964" blue="0.93725490196078431" alpha="0.20303385147195779" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="4GL-Jn-QOY" secondAttribute="bottom" constant="40" id="60H-j3-TcV"/>
-                        <constraint firstItem="TMi-OE-UWy" firstAttribute="top" secondItem="eav-AK-DIB" secondAttribute="top" constant="15" id="DA8-QX-gNu"/>
+                        <constraint firstItem="TMi-OE-UWy" firstAttribute="top" secondItem="eav-AK-DIB" secondAttribute="top" constant="25" id="DA8-QX-gNu"/>
                         <constraint firstItem="4GL-Jn-QOY" firstAttribute="leading" secondItem="eav-AK-DIB" secondAttribute="leading" id="G0O-rG-kOz"/>
-                        <constraint firstItem="TMi-OE-UWy" firstAttribute="leading" secondItem="eav-AK-DIB" secondAttribute="leading" constant="15" id="NBa-Wr-tru"/>
+                        <constraint firstItem="TMi-OE-UWy" firstAttribute="leading" secondItem="eav-AK-DIB" secondAttribute="leading" constant="20" id="NBa-Wr-tru"/>
                         <constraint firstItem="4GL-Jn-QOY" firstAttribute="top" secondItem="TMi-OE-UWy" secondAttribute="bottom" constant="15" id="egQ-GF-VPe"/>
                         <constraint firstAttribute="trailing" secondItem="4GL-Jn-QOY" secondAttribute="trailing" id="mvD-vt-HGb"/>
                     </constraints>

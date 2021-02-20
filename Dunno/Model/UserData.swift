@@ -17,11 +17,10 @@ class UserData {
         }
     }
     
+    var tests: [Test]
+    
     private init() {
         authToken = userDefaults.string(forKey: "UserSigned") ?? ""
-        userStudent = Student(name: "Misha Kuznetsov")
+        tests = []
     }
-    
-    var userStudent: Student
-    var messages = [SavedMessage]()
 }

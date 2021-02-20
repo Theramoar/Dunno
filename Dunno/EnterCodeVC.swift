@@ -11,6 +11,7 @@ class EnterCodeViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet private var enterCodeTextField: UITextField!
     @IBOutlet private var startTestButton: UIButton!
+    private let viewModel = EnterCodeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +44,53 @@ class EnterCodeViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction private func startTestButtonPressed(_ sender: Any) {
-        let vc = TestPrepViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        guard let code = enterCodeTextField.text, !code.isEmpty else {
+            presentErrorAlert(title: "Test code is empty!", message: "Please enter test code.")
+            return
+        }
+        
+        guard !viewModel.testWithCodeAlreadyExists(code) else {
+            presentErrorAlert(title: "Test already exists", message: "You can find it in Active tests screen")
+            return
+        }
+        
+        viewModel.fetchTest(code: code) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            
+            case .success(_):
+                let vc = TestPrepViewController()
+                vc.viewModel = self.viewModel.viewModelForTestPrep()
+                self.navigationController?.pushViewController(vc, animated: true)
+            case .failure(let networkError):
+                var title = ""
+                var message = ""
+                switch networkError {
+                case .badURL:
+                    title = "Internal error occured"
+                    message = "Please contact the support team"
+                case .noResponse:
+                    title = "Network error"
+                    message = "Please, try again later"
+                case .validationErrorCode:
+                    title = "Entered code is incorrect"
+                    message = "Please, enter antoher code"
+                case .serverErrorCode:
+                    title = "Server error"
+                    message = "Please, try again later"
+                case .noData:
+                    title = "The test was deleted"
+                    message = "Please, enter another code"
+                case .failDecoding:
+                    title = "Internal error occured"
+                    message = "Please contact the support team"
+                }
+                self.presentErrorAlert(title: title, message: message)
+            }
+        }
+        
     }
+    
     
     // MARK: - Method, that react on textField change and dissmises the button
         func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -68,4 +113,51 @@ class EnterCodeViewController: UIViewController, UITextFieldDelegate {
 
             return false
         }
+}
+
+
+extension UIViewController {
+    func presentErrorAlert(title: String?, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default)
+        alert.view.tintColor = Colors.appColor!
+        alert.addAction(ok)
+        present(alert, animated: true)
+    }
+}
+
+
+class EnterCodeViewModel {
+    let network = NetworkDataFetcher()
+    let coreData: CoreDataManager = .shared
+    let userData: UserData = .shared
+    private var newTest: Test?
+    
+    func testWithCodeAlreadyExists(_ code: String) -> Bool {
+        userData.tests.first { $0.code == code } != nil
+    }
+    
+    func fetchTest(code: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
+        network.fetchTest(code: code) { [weak self] result in
+            switch result {
+            case .success(let fetchedTest):
+                self?.save(fetchedTest: fetchedTest, withCode: code)
+                completion(.success(""))
+            case .failure(let networkError):
+                print(networkError.rawValue)
+                completion(.failure(networkError))
+            }
+        }
+    }
+    
+    private func save(fetchedTest: FetchedTest, withCode code: String) {
+        #warning("Send correct dates")
+        #warning("remove newTest as it is appended in coreData.saveTest")
+        newTest = coreData.saveTest(title: fetchedTest.title, code: code, fromDate: Date(), toDate: Date())
+    }
+    
+    func viewModelForTestPrep() -> TestPrepViewModel {
+        guard let test = newTest else { fatalError("Problem saving new test!") }
+        return TestPrepViewModel(test: test)
+    }
 }

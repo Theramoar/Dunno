@@ -15,24 +15,36 @@ enum RequestType: String {
 }
 
 class NetworkService {
-    func makeRequest(type: RequestType, path: String, params: [String : Any]?, authHeader: String?, completion: @escaping (Data) -> Void) {
+    func makeRequest(type: RequestType, path: String, params: [String : Any]?, authHeader: String?, completion: @escaping (Result<Data, NetworkError>) -> Void) {
         guard let url = creareUrl(from: path) else { print("ERROR, CREATING URL") ; return }
         let data = params != nil ? prepareJSONData(params: params!) : nil
         let request = createRequest(type: type, url: url, body: data, authHeader: authHeader)
-        let task = createDataTask(from: request) { (data, error) in
-            guard let data = data, error == nil else {
-                print(error?.localizedDescription ?? "No Data")
+        let task = createDataTask(from: request) { (data, response, error) in
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(.noResponse))
                 return
             }
-            completion(data)
+            if 400..<500 ~= httpResponse.statusCode {
+                completion(.failure(.validationErrorCode))
+            } else if httpResponse.statusCode >= 500 {
+                completion(.failure(.serverErrorCode))
+            }
+            
+            
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No Data")
+                completion(.failure(.noData))
+                return
+            }
+            completion(.success(data))
         }
         task.resume()
     }
     
-    private func createDataTask(from request: URLRequest, completion: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask {
+    private func createDataTask(from request: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
-                completion(data, error)
+                completion(data, response, error)
             }
         }
     }
@@ -48,14 +60,12 @@ class NetworkService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = body
         if let authHeader = authHeader {
-            request.setValue(authHeader, forHTTPHeaderField: "X-AUTH-TOKEN")
+            request.setValue(authHeader, forHTTPHeaderField: "X-AUTH-TOKEN") // here cookie and student token as authHeader
         }
         return request
     }
     
     private func creareUrl(from path: String) -> URL? {
-//        return URL(string: API.scheme.rawValue + "://" + API.host.rawValue + path)
-        
         var components = URLComponents()
         components.scheme = API.scheme.rawValue
         components.host = API.host.rawValue

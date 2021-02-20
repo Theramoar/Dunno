@@ -23,10 +23,6 @@ let dummyStudents = [Student(name: "Dmitriy"),
                     Student(name: "Nikolay")
 ]
 
-let dummyTests = [Test(topic: dummyTopics[0]),
-                Test(topic: dummyTopics[1]),
-                Test(topic: dummyTopics[2])]
-
 let dummySubjects = [Subject(name: "Math 👨‍🏫", topics: dummyMathTopics),
                     Subject(name: "Science 👨‍🔬"),
                     Subject(name: "English 💂‍♀️", topics: [dummyTopics[0]]),

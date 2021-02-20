@@ -9,35 +9,33 @@ import Foundation
 
 
 class TestViewModel {
-    private var test: FetchedTest?
+    private var test: Test
     private var fetcher = NetworkDataFetcher()
     private let userData: UserData = .shared
     
-    func fetchTests(completion: @escaping () -> Void) {
-        fetcher.fetchTest { [weak self] test in
-            self?.test = test
-            completion()
-        }
+    var testTitle: String {
+        test.title ?? "N/A"
     }
     
-    func numberOfAnswersForQuestion(at indexPath: IndexPath) -> Int {
-        test?.test.questions[indexPath.row].answers.count ?? 0
+    init(test: Test) {
+        self.test = test
     }
+    
 }
 
-extension TestViewModel: TableViewModelType {
-    var numberOfRows: Int { test?.test.questions.count ?? 0 }
-    var numberOfSections: Int { 0 }
-    
-    
-    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelType? {
-        guard let question  = test?.test.questions[indexPath.row] else { return nil }
-        return QuestionCellViewModel(question: question)
-    }
-    
-    func viewModelForSelectedRow() -> DetailViewModelType? {
-        nil
-    }
-    
-    func selectRow(atIndexPath indexPath: IndexPath) { }
-}
+//extension TestViewModel: TableViewModelType {
+//    var numberOfRows: Int { test?.test.questions.count ?? 0 }
+//    var numberOfSections: Int { 0 }
+//    
+//    
+//    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelType? {
+//        guard let question  = test?.test.questions[indexPath.row] else { return nil }
+//        return QuestionCellViewModel(question: question)
+//    }
+//    
+//    func viewModelForSelectedRow() -> DetailViewModelType? {
+//        nil
+//    }
+//    
+//    func selectRow(atIndexPath indexPath: IndexPath) { }
+//}

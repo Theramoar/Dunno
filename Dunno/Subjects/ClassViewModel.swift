@@ -8,21 +8,51 @@
 import Foundation
 
 class ClassViewModel: TableViewModelType {
+    private let userData: UserData = .shared
+    private let coreData: CoreDataManager = .shared
+    private var selectedIndexPath: IndexPath?
+    
+    init() {
+        userData.tests = coreData.loadDataFromContainer(ofType: Test.self)
+    }
+    
+
+    
     var numberOfSections: Int {
         0
     }
     
     var numberOfRows: Int {
-        dummySubjects.count
+        userData.tests.count
     }
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelType? {
-        SubjectCellViewModel(studyClass: dummySubjects[indexPath.row])
+        let test = userData.tests[indexPath.row]
+        return SubjectCellViewModel(test: test)
     }
     
     func viewModelForSelectedRow() -> DetailViewModelType? {
         nil
     }
     
-    func selectRow(atIndexPath indexPath: IndexPath) {}
+    func selectRow(atIndexPath indexPath: IndexPath) {
+        selectedIndexPath = indexPath
+    }
+    
+    func userIsAlreadyRegisteredForTest() -> Bool {
+        guard let indexPath = selectedIndexPath else { fatalError("No selected indexPath") }
+        return userData.tests[indexPath.row].id != nil
+    }
+    
+    func viewModelForTestPrepView() -> TestPrepViewModel {
+        guard let indexPath = selectedIndexPath else { fatalError("No selected indexPath") }
+        let test = userData.tests[indexPath.row]
+        return TestPrepViewModel(test: test)
+    }
+    
+    func viewModelForTestView() -> TestViewModel {
+        guard let indexPath = selectedIndexPath else { fatalError("No selected indexPath") }
+        let test = userData.tests[indexPath.row]
+        return TestViewModel(test: test)
+    }
 }

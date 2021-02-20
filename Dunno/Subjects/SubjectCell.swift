@@ -26,13 +26,13 @@ class SubjectCell: UITableViewCell {
 }
 
 class SubjectCellViewModel: CellViewModelType {
-    private let studyClass: Subject
+    private let test: Test
     
     var className: String {
-        studyClass.name
+        test.title ?? "N/A"
     }
     
-    init(studyClass: Subject) {
-        self.studyClass = studyClass
+    init(test: Test) {
+        self.test = test
     }
 }

@@ -26,8 +26,8 @@ class TabBarController: UITabBarController {
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().shadowImage = UIImage()
 
-        let messages = coreData.loadDataFromContainer(ofType: SavedMessage.self)
-        userData.messages = messages
+//        let messages = coreData.loadDataFromContainer(ofType: SavedMessage.self)
+//        userData.messages = messages
         viewControllers = [createVC(vc: SubjectListViewController(), image: UIImage(systemName: "books.vertical"), title: "Active tests")]
 //        createVC(vc: UserProfileViewController(), image: UIImage(systemName: "person"), title: "User profile")
 //        createVC(vc: ChatListViewController(), image: UIImage(systemName: "message"), title: "Chats")
@@ -44,11 +44,11 @@ class TabBarController: UITabBarController {
     }
     
 
-    private func createMockData() {
-        _ = CoreDataManager.shared.saveMessage(direction: .outbound, message: "Hello", colocutor: "Slavik", date: Date())
-        _ = CoreDataManager.shared.saveMessage(direction: .inbound, message: "Hello", colocutor: "Slavik", date: Date())
-        _ = CoreDataManager.shared.saveMessage(direction: .outbound, message: "Will you teach me, Mentor?", colocutor: "Slavik", date: Date())
-    }
+//    private func createMockData() {
+//        _ = CoreDataManager.shared.saveMessage(direction: .outbound, message: "Hello", colocutor: "Slavik", date: Date())
+//        _ = CoreDataManager.shared.saveMessage(direction: .inbound, message: "Hello", colocutor: "Slavik", date: Date())
+//        _ = CoreDataManager.shared.saveMessage(direction: .outbound, message: "Will you teach me, Mentor?", colocutor: "Slavik", date: Date())
+//    }
 }
 
 extension UIViewController {
