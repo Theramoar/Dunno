@@ -60,7 +60,8 @@ class NetworkService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = body
         if let authHeader = authHeader {
-            request.setValue(authHeader, forHTTPHeaderField: "X-AUTH-TOKEN") // here cookie and student token as authHeader
+//            request.setValue("PHPSESSID=7od9p289okvttj4kforjl4slm8", forHTTPHeaderField: "Cookie") // here cookie and student token as authHeader
+            request.setValue("LICEJ-TOKEN=\(authHeader)", forHTTPHeaderField: "Cookie")
         }
         return request
     }

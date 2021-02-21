@@ -10,13 +10,21 @@ import Foundation
 class ClassViewModel: TableViewModelType {
     private let userData: UserData = .shared
     private let coreData: CoreDataManager = .shared
+    private let network: NetworkDataFetcher = NetworkDataFetcher()
     private var selectedIndexPath: IndexPath?
     
     init() {
         userData.tests = coreData.loadDataFromContainer(ofType: Test.self)
     }
     
-
+    func fetchSelectedExam(completion: @escaping (Result<FetchedExam, NetworkError>) -> Void) {
+        guard let indexPath = selectedIndexPath else { fatalError("No selected indexPath") }
+        guard let testId = userData.tests[indexPath.row].testId else { return }
+        network.requestExam(withID: testId) { (result) in
+            
+            completion(result)
+        }
+    }
     
     var numberOfSections: Int {
         0
@@ -41,7 +49,7 @@ class ClassViewModel: TableViewModelType {
     
     func userIsAlreadyRegisteredForTest() -> Bool {
         guard let indexPath = selectedIndexPath else { fatalError("No selected indexPath") }
-        return userData.tests[indexPath.row].id != nil
+        return userData.tests[indexPath.row].testId != nil
     }
     
     func viewModelForTestPrepView() -> TestPrepViewModel {
@@ -50,9 +58,7 @@ class ClassViewModel: TableViewModelType {
         return TestPrepViewModel(test: test)
     }
     
-    func viewModelForTestView() -> TestViewModel {
-        guard let indexPath = selectedIndexPath else { fatalError("No selected indexPath") }
-        let test = userData.tests[indexPath.row]
-        return TestViewModel(test: test)
+    func viewModelForTestView(exam: Exam) -> TestViewModel {
+        return TestViewModel(exam: exam)
     }
 }

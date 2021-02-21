@@ -67,9 +67,41 @@ extension SubjectListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.selectRow(atIndexPath: indexPath)
         if viewModel.userIsAlreadyRegisteredForTest() {
-            let vc = TestViewController()
-            vc.viewModel = viewModel.viewModelForTestView()
-            present(vc, animated: true)
+            viewModel.fetchSelectedExam { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(let fetchedExam):
+                    let exam = Exam(fetchedExam)
+                    let vc = TestViewController()
+                    vc.viewModel = self.viewModel.viewModelForTestView(exam: exam)
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true)
+                case .failure(let error):
+                    var title = ""
+                    var message = ""
+                    switch error {
+                    case .badURL:
+                        title = "Internal error occured"
+                        message = "Please contact the support team"
+                    case .noResponse:
+                        title = "Network error"
+                        message = "Please, try again later"
+                    case .validationErrorCode:
+                        title = "Server error"
+                        message = "Please, try again later"
+                    case .serverErrorCode:
+                        title = "Server error"
+                        message = "Please, try again later"
+                    case .noData:
+                        title = "The test was deleted"
+                        message = "Please, enter another code"
+                    case .failDecoding:
+                        title = "Internal error occured"
+                        message = "Please contact the support team"
+                    }
+                    self.presentErrorAlert(title: title, message: message)
+                }
+            }
         } else {
             let vc = TestPrepViewController()
             vc.viewModel = viewModel.viewModelForTestPrepView()

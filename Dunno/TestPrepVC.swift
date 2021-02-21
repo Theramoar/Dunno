@@ -44,9 +44,8 @@ class TestPrepViewController: UIViewController, UITextFieldDelegate {
             guard let self = self else { return }
             switch response {
             case .success(_):
-                let vc = TestViewController()
-                vc.viewModel = self.viewModel.viewModelForTestView()
-                self.navigationController?.pushViewController(vc, animated: true)
+                self.presentErrorAlert(title: "You have succesfully registered for the test", message: "You can start the test from Main menu")
+                self.dismiss(animated: true)
             case .failure(let error):
                 var title = ""
                 var message = ""
@@ -153,7 +152,7 @@ class TestPrepViewModel {
         userData.authToken = authToken
     }
     
-    func viewModelForTestView() -> TestViewModel {
-        TestViewModel(test: test)
-    }
+//    func viewModelForTestView() -> TestViewModel {
+//        TestViewModel(exam: <#T##FetchedExam#>)
+//    }
 }

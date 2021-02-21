@@ -62,23 +62,22 @@ class NetworkDataFetcher {
         }
     }
     
-    func login(with email: String,password: String, completion: @escaping (String?) -> Void) {
-        let params = [
-            "email": email,
-            "password": password
-        ]
-        network.makeRequest(type: .post, path: API.Endpoints.login.rawValue, params: params, authHeader: nil) { (data) in
-//            guard let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: String] else {
-//                print("Error Receiving Token")
-//                return
-//            }
-//            if let _ = json["message"] {
-//                completion(nil)
-//            }
-//            else if let message = json["apiToken"] {
-//                completion(message)
-//            }
-//            print(json)
+    func requestExam(withID testID: String, completion: @escaping (Result<FetchedExam, NetworkError>) -> Void) {
+        let path = API.Endpoints.exam.rawValue + "/" + testID + "/exam"
+        print(path)
+        print(UserData.shared.authToken)
+        network.makeRequest(type: .get, path: path, params: nil, authHeader: UserData.shared.authToken) { response in
+            switch response {
+            case .success(let data):
+                guard let test = self.decodeJSON(type: FetchedExam.self, from: data) else {
+                    print("Fail Decoding JSON")
+                    completion(.failure(.failDecoding))
+                    return
+                }
+                completion(.success(test))
+            case .failure(let networkError):
+                completion(.failure(networkError))
+            }
         }
     }
     

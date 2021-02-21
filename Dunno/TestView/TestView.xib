@@ -116,7 +116,7 @@
     </objects>
     <resources>
         <namedColor name="AppColor">
-            <color red="0.22745098039215686" green="0.4392156862745098" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.22699999809265137" green="0.43900001049041748" blue="0.75700002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
