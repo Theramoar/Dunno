@@ -41,7 +41,7 @@ class CoreDataManager {
         return data
     }
     
-    func saveTest(title: String, code: String, fromDate: Date, toDate: Date) -> Test? {
+    func saveTest(title: String, code: String, fromDate: Date?, toDate: Date?) -> Test? {
         guard let entity = NSEntityDescription.entity(forEntityName: "Test", in: context) else { return nil}
         let test = NSManagedObject(entity: entity, insertInto: context) as! Test
         

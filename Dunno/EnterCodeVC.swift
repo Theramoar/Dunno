@@ -155,7 +155,15 @@ class EnterCodeViewModel {
     private func save(fetchedTest: FetchedTest, withCode code: String) {
         #warning("Send correct dates")
         #warning("remove newTest as it is appended in coreData.saveTest")
-        newTest = coreData.saveTest(title: fetchedTest.title, code: code, fromDate: Date(), toDate: Date())
+        let fromDate = dateFrom(string: fetchedTest.activeFrom)
+        
+        let toDate = dateFrom(string: fetchedTest.activeTo)
+        newTest = coreData.saveTest(title: fetchedTest.title, code: code, fromDate: fromDate, toDate: toDate)
+    }
+    
+    private func dateFrom(string: String) -> Date? {
+        let dateFormatter = ISO8601DateFormatter()
+        return dateFormatter.date(from: string)
     }
     
     func viewModelForTestPrep() -> TestPrepViewModel {

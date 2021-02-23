@@ -73,6 +73,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="availabilityLabel" destination="eDW-j8-EJg" id="AwH-YE-D4i"/>
                 <outlet property="nameLabel" destination="eSj-3W-jfw" id="hzV-GM-hHl"/>
                 <outlet property="subjectView" destination="PAU-15-xrc" id="rf5-06-yGN"/>
                 <outlet property="timerImageView" destination="usr-sS-fkL" id="ZaH-JQ-JFv"/>
