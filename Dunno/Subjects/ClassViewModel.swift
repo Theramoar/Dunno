@@ -21,7 +21,6 @@ class ClassViewModel: TableViewModelType {
         guard let indexPath = selectedIndexPath else { fatalError("No selected indexPath") }
         guard let testId = userData.tests[indexPath.row].testId else { return }
         network.requestExam(withID: testId) { (result) in
-            
             completion(result)
         }
     }

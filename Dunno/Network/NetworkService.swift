@@ -26,8 +26,10 @@ class NetworkService {
             }
             if 400..<500 ~= httpResponse.statusCode {
                 completion(.failure(.validationErrorCode))
+                return
             } else if httpResponse.statusCode >= 500 {
                 completion(.failure(.serverErrorCode))
+                return
             }
             
             

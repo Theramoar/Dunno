@@ -28,5 +28,6 @@ struct FetchedAnswer: Decodable {
 
 
 struct FetchedExam: Decodable {
+    let id: Int
     let test: FetchedTest
 }

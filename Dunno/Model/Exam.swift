@@ -9,12 +9,13 @@ import Foundation
 
 
 class Exam {
+    let id: Int
     let title: String
     var questions: [Question]
     
     init(_ fetchedExam: FetchedExam) {
         self.title = fetchedExam.test.title
-        
+        self.id = fetchedExam.id
         self.questions = []
         guard let fetchedQuestions = fetchedExam.test.questions else { return }
         for fetchedQuestion in fetchedQuestions {

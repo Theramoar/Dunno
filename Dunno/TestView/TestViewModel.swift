@@ -47,6 +47,9 @@ class TestViewModel {
         }
     }
     
+    func sendAnswersToServer() {
+        fetcher.sendAnswers(toExamWithID: String(exam.id), questions: exam.questions)
+    }
 }
 
 extension TestViewModel: TableViewModelType {

@@ -13,6 +13,7 @@ enum API: String {
     
     enum Endpoints: String {
         case login = "/api/login"
-        case exam = "/api/tests"
+        case tests = "/api/tests"
+        case exam = "/api/exam"
     }
 }

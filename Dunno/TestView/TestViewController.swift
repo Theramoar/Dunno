@@ -63,6 +63,7 @@ class TestViewController: UIViewController {
     
     @IBAction func failTest(_ sender: Any) {
         if viewModel.isLastQuestion {
+            viewModel.sendAnswersToServer()
             dismiss(animated: true)
         } else {
             showNextQuestion()

@@ -63,9 +63,7 @@ class NetworkDataFetcher {
     }
     
     func requestExam(withID testID: String, completion: @escaping (Result<FetchedExam, NetworkError>) -> Void) {
-        let path = API.Endpoints.exam.rawValue + "/" + testID + "/exam"
-        print(path)
-        print(UserData.shared.authToken)
+        let path = API.Endpoints.tests.rawValue + "/" + testID + "/exam"
         network.makeRequest(type: .get, path: path, params: nil, authHeader: UserData.shared.authToken) { response in
             switch response {
             case .success(let data):
@@ -79,6 +77,31 @@ class NetworkDataFetcher {
                 completion(.failure(networkError))
             }
         }
+    }
+    
+    func sendAnswers(toExamWithID id: String, questions: [Question]) {
+        let path = API.Endpoints.exam.rawValue + "/" + id + "/conduct"
+        print(path)
+        var preparedQuestions = [[String: Any]]()
+        for question in questions {
+            if let index = question.answers.firstIndex(where: { $0.checked }) {
+                let pair = ["answers": index]
+                preparedQuestions.append(pair)
+            }
+        }
+        let params = ["questions": preparedQuestions]
+        
+        network.makeRequest(type: .put, path: path, params: params, authHeader: nil) { result in
+            switch result {
+            case .success(_):
+                print("success")
+                return
+            case .failure(_):
+                print("failure")
+                return
+            }
+        }
+        
     }
     
     
