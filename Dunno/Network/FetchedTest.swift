@@ -11,7 +11,7 @@ struct FetchedTest: Decodable {
     let title: String
     let activeFrom: String
     let activeTo: String
-    let questions: [FetchdQuestion]
+    let questions: [FetchdQuestion]?
 }
 
 struct FetchdQuestion: Decodable {

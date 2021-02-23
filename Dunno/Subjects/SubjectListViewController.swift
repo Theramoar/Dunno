@@ -9,6 +9,7 @@ import UIKit
 
 class SubjectListViewController: UIViewController {
     private let viewModel = ClassViewModel()
+    private let notificationCenter: NotificationCenter = .default
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var layerView: UIView!
     
@@ -16,6 +17,8 @@ class SubjectListViewController: UIViewController {
         super.viewDidLoad()
         setupTable()
         setupNavigation()
+        notificationCenter.addObserver(self, selector: #selector (updateView), name: .testMopdelWasUpdated, object: nil)
+        notificationCenter.addObserver(self, selector: #selector (notifyUserWithAlert), name: .userWasRegisteredForTest, object: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -48,6 +51,14 @@ class SubjectListViewController: UIViewController {
         let vc = EnterCodeViewController()
         let navVC = UINavigationController(rootViewController: vc)
         present(navVC, animated: true)
+    }
+    
+    @objc private func updateView() {
+        tableView.reloadData()
+    }
+    
+    @objc private func notifyUserWithAlert() {
+        presentErrorAlert(title: "You have succesfully registered for the test", message: "You can now start the test at any time!")
     }
 }
 

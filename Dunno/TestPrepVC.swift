@@ -14,6 +14,7 @@ struct Colors {
 
 class TestPrepViewController: UIViewController, UITextFieldDelegate {
     var viewModel: TestPrepViewModel!
+    private var notificationCenter: NotificationCenter = .default
     @IBOutlet private var enterNameTextField: UITextField!
     @IBOutlet private var startTestButton: UIButton!
     @IBOutlet private var countdownLabel: UILabel!
@@ -44,7 +45,8 @@ class TestPrepViewController: UIViewController, UITextFieldDelegate {
             guard let self = self else { return }
             switch response {
             case .success(_):
-                self.presentErrorAlert(title: "You have succesfully registered for the test", message: "You can start the test from Main menu")
+
+                self.notificationCenter.post(name: .userWasRegisteredForTest, object: nil)
                 self.dismiss(animated: true)
             case .failure(let error):
                 var title = ""
@@ -128,7 +130,6 @@ class TestPrepViewModel {
         guard let code = test.code else { return }
         network.registerForTest(withCode: code, name: name) { [weak self] response in
             guard let self = self else { return }
-            print("registerForTest")
             switch response {
             case .success(let testInfo):
                 let testId = testInfo.0

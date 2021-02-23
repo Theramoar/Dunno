@@ -56,7 +56,7 @@
                         <constraint firstAttribute="height" constant="60" id="hVN-Dy-0ED"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                    <state key="normal" title="START TEST">
+                    <state key="normal" title="REGISTER FOR TEST">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>

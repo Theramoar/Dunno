@@ -16,7 +16,8 @@ class Exam {
         self.title = fetchedExam.test.title
         
         self.questions = []
-        for fetchedQuestion in fetchedExam.test.questions {
+        guard let fetchedQuestions = fetchedExam.test.questions else { return }
+        for fetchedQuestion in fetchedQuestions {
             let question = Question(fetchedQuestion)
             questions.append(question)
         }

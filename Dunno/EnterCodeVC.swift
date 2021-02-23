@@ -12,6 +12,7 @@ class EnterCodeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet private var enterCodeTextField: UITextField!
     @IBOutlet private var startTestButton: UIButton!
     private let viewModel = EnterCodeViewModel()
+    private var notificationCenter: NotificationCenter = .default
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,7 @@ class EnterCodeViewController: UIViewController, UITextFieldDelegate {
             switch result {
             
             case .success(_):
+                self.notificationCenter.post(name: .testMopdelWasUpdated, object: nil)
                 let vc = TestPrepViewController()
                 vc.viewModel = self.viewModel.viewModelForTestPrep()
                 self.navigationController?.pushViewController(vc, animated: true)

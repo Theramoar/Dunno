@@ -34,6 +34,7 @@
 		D290817D25DEF24B00ED6B86 /* Test+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290817B25DEF24B00ED6B86 /* Test+CoreDataProperties.swift */; };
 		D290818425E2652A00ED6B86 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D290818325E2652A00ED6B86 /* AnswerCell.xib */; };
 		D290818725E265F200ED6B86 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290818625E265F200ED6B86 /* AnswerCell.swift */; };
+		D290818C25E2CB6900ED6B86 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290818B25E2CB6900ED6B86 /* NotificationNames.swift */; };
 		D2A7B9FE257AD6070037A29C /* SubjectTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7B9FD257AD6070037A29C /* SubjectTopicsViewController.swift */; };
 		D2A7BA01257AD62D0037A29C /* SubjectListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A7BA00257AD62D0037A29C /* SubjectListView.xib */; };
 		D2A7BA09257ADAD90037A29C /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7BA08257ADAD90037A29C /* ChatListViewController.swift */; };
@@ -101,6 +102,7 @@
 		D290817B25DEF24B00ED6B86 /* Test+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D290818325E2652A00ED6B86 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
 		D290818625E265F200ED6B86 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		D290818B25E2CB6900ED6B86 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		D2A7B9FD257AD6070037A29C /* SubjectTopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTopicsViewController.swift; sourceTree = "<group>"; };
 		D2A7BA00257AD62D0037A29C /* SubjectListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectListView.xib; sourceTree = "<group>"; };
 		D2A7BA08257ADAD90037A29C /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				D20B7086257ACD3000CD5876 /* Dummies.swift */,
 				D2281027257557C000A909F2 /* SceneDelegate.swift */,
 				BB397AD625C09E51001B4A20 /* TestPrepVC.swift */,
+				D290818B25E2CB6900ED6B86 /* NotificationNames.swift */,
 				BB397AD925C09E7A001B4A20 /* TestPrepView.xib */,
 				D2809BF625BF5105007D9BA4 /* EnterCodeVC.swift */,
 				D21D73BB25C092C100C38966 /* EnterCodeView.xib */,
@@ -436,6 +439,7 @@
 				D228104525757CC200A909F2 /* Subject.swift in Sources */,
 				D2281030257557C000A909F2 /* Dunno.xcdatamodeld in Sources */,
 				D2A7BA14257AFD920037A29C /* NetworkService.swift in Sources */,
+				D290818C25E2CB6900ED6B86 /* NotificationNames.swift in Sources */,
 				D228103E2575598B00A909F2 /* TabBarController.swift in Sources */,
 				D2B26657257BC8C800E8C7B6 /* LoginViewController.swift in Sources */,
 				D2A7B9FE257AD6070037A29C /* SubjectTopicsViewController.swift in Sources */,
