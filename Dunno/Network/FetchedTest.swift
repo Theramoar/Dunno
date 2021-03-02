@@ -9,8 +9,9 @@ import Foundation
 
 struct FetchedTest: Decodable {
     let title: String
-    let activeFrom: String
-    let activeTo: String
+    #warning("убрать ? когда всё будет ок")
+    let activeFrom: String?
+    let activeTo: String?
     let questions: [FetchdQuestion]?
 }
 
@@ -23,6 +24,7 @@ struct FetchdQuestion: Decodable {
 struct FetchedAnswer: Decodable {
     let id: Int
     let title: String
+    let type: Int
     let correct: Bool
 }
 

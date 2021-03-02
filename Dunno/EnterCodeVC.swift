@@ -154,8 +154,8 @@ class EnterCodeViewModel {
     
     private func save(fetchedTest: FetchedTest, withCode code: String) {
         #warning("remove newTest as it is appended in coreData.saveTest")
-        let fromDate = dateFrom(string: fetchedTest.activeFrom)
-        let toDate = dateFrom(string: fetchedTest.activeTo)
+        let fromDate = dateFrom(string: fetchedTest.activeFrom ?? "")
+        let toDate = dateFrom(string: fetchedTest.activeTo ?? "")
         
         newTest = coreData.saveTest(title: fetchedTest.title, code: code, fromDate: fromDate, toDate: toDate)
     }

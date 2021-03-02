@@ -8,9 +8,11 @@
 import Foundation
 
 
+
 class Exam {
     let id: Int
     let title: String
+    
     var questions: [Question]
     
     init(_ fetchedExam: FetchedExam) {
@@ -41,14 +43,30 @@ class Question {
 }
 
 class Answer {
+    enum AnswerType {
+        case singleChoice, multipleChoice, text
+    }
+    
     let title: String
     let correct: Bool
     var checked: Bool
+    let type: AnswerType
     
     init(_ fetchedAnswer: FetchedAnswer) {
         self.title = fetchedAnswer.title
         self.checked = false
         self.correct = fetchedAnswer.correct
+        
+        switch fetchedAnswer.type {
+        case 0:
+            self.type = .singleChoice
+        case 1:
+            self.type = .multipleChoice
+        case 2:
+            self.type = .text
+        default:
+            self.type = .singleChoice
+        }
     }
 }
 

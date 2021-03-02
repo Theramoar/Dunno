@@ -69,8 +69,16 @@ extension TestViewModel: TableViewModelType {
         selectedIndexPath = indexPath
     }
     
-    func toggleAnswer(atIndexPath indexPath: IndexPath) {
-        currentQuestion.answers.forEach { $0.checked = false }
-        currentQuestion.answers[indexPath.row].checked = true
+    func toggleAnswer(atIndexPath indexPath: IndexPath) {   
+        let selectedAnswer = currentQuestion.answers[indexPath.row]
+        switch selectedAnswer.type {
+        case .singleChoice:
+            currentQuestion.answers.forEach { $0.checked = false }
+            selectedAnswer.checked = true
+        case .multipleChoice:
+            selectedAnswer.checked.toggle()
+        case .text:
+            break
+        }
     }
 }

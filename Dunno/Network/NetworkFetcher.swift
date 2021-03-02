@@ -67,12 +67,12 @@ class NetworkDataFetcher {
         network.makeRequest(type: .get, path: path, params: nil, authHeader: UserData.shared.authToken) { response in
             switch response {
             case .success(let data):
-                guard let test = self.decodeJSON(type: FetchedExam.self, from: data) else {
+                guard let exam = self.decodeJSON(type: FetchedExam.self, from: data) else {
                     print("Fail Decoding JSON")
                     completion(.failure(.failDecoding))
                     return
                 }
-                completion(.success(test))
+                completion(.success(exam))
             case .failure(let networkError):
                 completion(.failure(networkError))
             }
@@ -81,14 +81,8 @@ class NetworkDataFetcher {
     
     func sendAnswers(toExamWithID id: String, questions: [Question]) {
         let path = API.Endpoints.exam.rawValue + "/" + id + "/conduct"
-        print(path)
-        var preparedQuestions = [[String: Any]]()
-        for question in questions {
-            if let index = question.answers.firstIndex(where: { $0.checked }) {
-                let pair = ["answers": index]
-                preparedQuestions.append(pair)
-            }
-        }
+        
+        let preparedQuestions = prepare(questions)
         let params = ["questions": preparedQuestions]
         
         network.makeRequest(type: .put, path: path, params: params, authHeader: nil) { result in
@@ -111,5 +105,22 @@ class NetworkDataFetcher {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         guard let data = data, let response = try? decoder.decode(type.self, from: data) else { return nil }
         return response
+    }
+    
+    private func prepare(_ questions: [Question]) -> [[String: Any]] {
+        var preparedQuestions = [[String: Any]]()
+        for question in questions {
+            let indexes = question.answers.enumerated().compactMap { enumAnswer -> Int? in
+                if enumAnswer.element.checked {
+                    return enumAnswer.offset
+                }
+                return nil
+            }
+            
+            let pair = ["answers": indexes]
+            preparedQuestions.append(pair)
+        }
+        
+        return preparedQuestions
     }
 }
